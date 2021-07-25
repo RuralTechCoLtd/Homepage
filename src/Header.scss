@@ -1,0 +1,30 @@
+:root {
+    --my-font1: Ricty Diminished;
+    --my-font2: 凸版文久ゴシック;
+}
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: antiquewhite;
+    width: 10vw;
+}
+.header__site-name {
+    margin: 0 auto;
+    font-family: var(--my-font1);
+    writing-mode: vertical-rl;
+    background-color: gray;
+}
+.header__hamburger-button {
+    background-color: rgb(107, 107, 255);
+    width: 100em;
+    height: 10vh;
+}
+.header__scrolldown {
+    margin: auto;
+    font-family: var(--my-font1);
+    writing-mode: vertical-rl;
+    background-color: rgb(221, 149, 149);
+}
