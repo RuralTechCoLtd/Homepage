@@ -9,12 +9,16 @@ const Top: React.FC = () => {
   return (
     <div className="Top">
       <Header />
-      <div className="Top__hero-container">
-        <img src="https://placehold.jp/1440x960.png" alt="heroImage" className="heroImage" />
-        <div className="Top__icon">
-          <h2>We will energize Japan from the rural areas.</h2>
-          <h1>Rural Tech</h1>
-        </div>
+      <div className="heroContainer">
+        <img
+          src="https://placehold.jp/1440x960.png"
+          alt="heroImage"
+          className="heroContainer__image"
+        />
+        <h1 className="heroContainer__corporateName">Rural Tech</h1>
+        <h2 className="heroContainer__message">
+          We will energize Japan from the rural areas.
+        </h2>
       </div>
       <About />
       <Services />
