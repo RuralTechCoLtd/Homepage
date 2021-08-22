@@ -12,16 +12,18 @@
     box-sizing: border-box;
   }
   &__corporateName {
+    font-family: var(--my-font1);
     position: absolute;
     top: 20%;
     left: 20%;
-    color: red;
+    color:white;
   }
   &__message {
+    font-family: var(--my-font1);
     position: absolute;
     top: 30%;
     left: 20%;
-    color: darkblue;
+    color: white;
   }
 }
 
