@@ -1,9 +1,11 @@
-import React from 'react';
-import Header from './Header';
-import About from './About';
-import Services from './Services';
-import Team from './Team';
-import './Top.scss';
+import React from "react";
+import Header from "./Header";
+import About from "./About";
+import Services from "./Services";
+import Team from "./Team";
+import News from "./News";
+import Footer from "./Footer";
+import "./Top.scss";
 
 const Top: React.FC = () => {
   return (
@@ -23,8 +25,10 @@ const Top: React.FC = () => {
       <About />
       <Services />
       <Team />
+      <News />
+      <Footer />
     </div>
   );
-}
+};
 
 export default Top;

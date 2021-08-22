@@ -1,9 +1,5 @@
-import React from 'react';
-import Header from './Header';
-import About from './About';
-import Services from './Services';
-import Team from './Team';
-import './Event.scss';
+import React from "react";
+import "./Event.scss";
 
 const Event: React.FC = () => {
   return (
@@ -11,6 +7,6 @@ const Event: React.FC = () => {
       <div>Event</div>
     </div>
   );
-}
+};
 
 export default Event;
