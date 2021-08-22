@@ -1,5 +1,7 @@
 import React from "react";
 import "./Services.scss";
+import AssistImage from "./images/soucecodeIMGL9025_TP_V.jpg";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 
 const Services: React.FC = () => {
   return (
@@ -31,7 +33,7 @@ const Services: React.FC = () => {
       </ul>
       <article>
         <img
-          src="https://placehold.jp/900x650.png"
+          src={AssistImage}
           alt="ServicesImage"
           className="Services__Image"
         />
@@ -43,7 +45,7 @@ const Services: React.FC = () => {
         </p>
       </article>
       <a>
-        And more...<img src="https://placehold.jp/20x20.png"></img>
+        <DoubleArrowIcon />
       </a>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import "./About.scss";
 
 const About: React.FC = () => {
@@ -24,7 +25,7 @@ const About: React.FC = () => {
         作成します。
       </p>
       <a>
-        About us<img src="https://placehold.jp/20x20.png"></img>
+        About us <DoubleArrowIcon />
       </a>
     </div>
   );
