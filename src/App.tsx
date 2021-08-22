@@ -1,11 +1,40 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Top from "./Top";
+import Event from "./Event";
+import AboutDetails from "./details/AboutDetails";
+import Services from "./Services";
+import Header from "./Header";
+import Footer from "./Footer";
+import "./App.scss";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
+      <Router>
+        <Header />
+        <ul>
+          <li>
+            <Link to="/">Top</Link>
+          </li>
+          <li>
+            <Link to="/event">イベントページ</Link>
+          </li>
+        </ul>
+        <hr />
+        <Switch>
+          <Route path="/About/AboutDetails" component={AboutDetails} />
+          <Route path="/Services" component={Services} />
+          <Route />
+          <Route />
+          <Route />
+          <Route />
+        </Switch>
+
+        <Footer />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

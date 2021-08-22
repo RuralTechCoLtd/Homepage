@@ -44,3 +44,30 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+``` plantuml
+file index.html
+component index
+component App
+component TopPage
+component EventPage
+component Header
+component Footer
+component About
+component Services
+component Team
+
+index.html --> index
+index --> App
+
+App --> TopPage
+TopPage --> Header
+TopPage --> About
+TopPage --> Services
+TopPage --> Team
+TopPage --> Footer
+
+App --> EventPage
+EventPage --> Header
+EventPage --> Footer
+```
