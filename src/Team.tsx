@@ -1,12 +1,16 @@
 import React from "react";
+import TeamImage from "./images/team_image.jpg";
+import CEOimage from "./images/CEOimage.jpg";
+import RYOimage from "./images/RYOimage.jpg";
 import "./Team.scss";
 
 const Team: React.FC = () => {
   return (
     <div>
+      {/* <img src={TeamImage} className="--team_image" /> */}
       <h1>Team members</h1>
       <article>
-        <img src="https://placehold.jp/200x200.png" alt="Team__pic" />
+        <img src={CEOimage} alt="Team__pic" />
         <h2>代表取締役</h2>
         <h1>山之内涼</h1>
         <p>
@@ -16,7 +20,7 @@ const Team: React.FC = () => {
         </p>
       </article>
       <article>
-        <img src="https://placehold.jp/200x200.png" alt="Team__pic" />
+        <img src={RYOimage} alt="Team__pic" />
         <h2>代表取締役</h2>
         <h1>山之内涼</h1>
         <p>
