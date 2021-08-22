@@ -1,19 +1,17 @@
 import React from "react";
-import Header from "./Header";
 import About from "./About";
 import Services from "./Services";
 import Team from "./Team";
 import News from "./News";
-import Footer from "./Footer";
+import HeroImage1 from "./images/Photos Library.jpg";
 import "./Top.scss";
 
 const Top: React.FC = () => {
   return (
     <div className="Top">
-      <Header />
       <div className="heroContainer">
         <img
-          src="https://placehold.jp/1440x960.png"
+          src={HeroImage1}
           alt="heroImage"
           className="heroContainer__image"
         />
@@ -26,7 +24,6 @@ const Top: React.FC = () => {
       <Services />
       <Team />
       <News />
-      <Footer />
     </div>
   );
 };
