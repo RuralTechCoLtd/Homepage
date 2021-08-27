@@ -105,7 +105,7 @@ const Header: React.FC = () => {
             <ListItemText primary={navlist[1]} />
           </ListItem>
         </Link>
-        <Link to="./details/AboutDetails">
+        <Link to="./details/Greeting">
           <ListItem button key={navlist[2]}>
             <ListItemIcon>
               <FaceIcon />
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             <ListItemText primary={navlist[2]} />
           </ListItem>
         </Link>
-        <Link to="./details/AboutDetails">
+        <Link to="./details/NewsArchive">
           <ListItem button key={navlist[3]}>
             <ListItemIcon>
               <AnnouncementIcon />
