@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./Services.scss";
 import AssistImage from "./images/soucecodeIMGL9025_TP_V.jpg";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
@@ -21,7 +22,9 @@ const Services: React.FC = () => {
           <li>ホスティング</li>
           <li>JavaScript</li>
         </ul>
-        <li>イベント予定</li>
+        <li>
+          <Link to="Services/EventList">イベント予定</Link>
+        </li>
         <ul>
           <li>社会人向けICTセミナー</li>
           <li>
