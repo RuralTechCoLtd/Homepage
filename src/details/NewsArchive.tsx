@@ -32,7 +32,7 @@ const NewsArchive: React.FC = () => {
         title="INTERVIEW#10 We Work Here."
         sample="sometime, work needs you 
 for something stupid."
-        root=""
+        root="/News/Details"
       />
       <ArchiveArticle
         image="https://placehold.jp/750x500.png"
