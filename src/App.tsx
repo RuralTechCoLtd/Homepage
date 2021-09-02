@@ -5,6 +5,7 @@ import Event from "./Event";
 import EventList from "./details/EventList";
 import EventDetails from "./details/EventDetails";
 import AboutDetails from "./details/AboutDetails";
+import NewsArchive from "./details/NewsArchive";
 import Services from "./Services";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -33,7 +34,7 @@ const App: React.FC = () => {
             path="/Services/EventList/EventDetails"
             component={EventDetails}
           />
-          <Route />
+          <Route path="/News/Archive" component={NewsArchive} />
         </Switch>
 
         <Footer />
