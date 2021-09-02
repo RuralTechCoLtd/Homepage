@@ -1,5 +1,7 @@
 import React from "react";
 import "./News.scss";
+import { Link } from "react-router-dom";
+
 import SampleImage1ForNews from "./images/brandon-atchison-p5_7nAgi-rw-unsplash.jpg";
 import SampleImage2ForNews from "./images/marvin-meyer-SYTO3xs06fU-unsplash.jpg";
 import SampleImage3ForNews from "./images/hawaiiGOPR0045_TP_V.jpg";
@@ -24,7 +26,9 @@ const News: React.FC = () => {
   return (
     <div className="News">
       <h1>News</h1>
-      <h3>Archive &gt;&gt;</h3>
+      <Link to="/News/Archive">
+        <h3>Archive &gt;&gt;</h3>
+      </Link>
       <NewsArticle
         image={SampleImage1ForNews}
         date="Jan 27"
