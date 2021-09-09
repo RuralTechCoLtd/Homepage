@@ -1,5 +1,7 @@
 import React from "react";
 import TeamImage from "./images/team_image.jpg";
+import { Link } from "react-router-dom";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import CEOimage from "./images/CEOimage.jpg";
 import RYOimage from "./images/RYOimage.jpg";
 import "./Team.scss";
@@ -29,6 +31,11 @@ const Team: React.FC = () => {
           詳細なインタビューは代表挨拶ページへ
         </p>
       </article>
+      <Link to="/Greeting">
+        <a>
+          代表挨拶ページへ <DoubleArrowIcon />
+        </a>
+      </Link>
     </div>
   );
 };
