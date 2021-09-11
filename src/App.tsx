@@ -7,6 +7,7 @@ import EventDetails from "./details/EventDetails";
 import AboutDetails from "./details/AboutDetails";
 import NewsArchive from "./details/NewsArchive";
 import NewsDetails from "./details/NewsDetails";
+import Greeting from "./details/Greeting";
 import Services from "./Services";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -27,9 +28,9 @@ const App: React.FC = () => {
         </ul>
         <hr />
         <Switch>
+          <Route path="/" exact component={Top} />
           <Route path="/About/AboutDetails" component={AboutDetails} />
           <Route path="/Services" exact component={Services} />
-          <Route path="/" exact component={Top} />
           <Route path="/Services/EventList" exact component={EventList} />
           <Route
             path="/Services/EventList/EventDetails"
@@ -37,8 +38,8 @@ const App: React.FC = () => {
           />
           <Route path="/News/Archive" component={NewsArchive} />
           <Route path="/News/Details" component={NewsDetails} />
+          <Route path="/Greeting" component={Greeting} />
         </Switch>
-
         <Footer />
       </Router>
     </div>
