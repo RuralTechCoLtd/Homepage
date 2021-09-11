@@ -9,6 +9,7 @@ import NewsArchive from "./details/NewsArchive";
 import NewsDetails from "./details/NewsDetails";
 import Greeting from "./details/Greeting";
 import Services from "./Services";
+import ServicesDetails from "./details/ServicesDetails";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.scss";
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/News/Archive" component={NewsArchive} />
           <Route path="/News/Details" component={NewsDetails} />
           <Route path="/Greeting" component={Greeting} />
+          <Route path="/ServiceDetails" component={ServicesDetails} />
         </Switch>
         <Footer />
       </Router>
