@@ -1,17 +1,27 @@
 import React from "react";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.scss";
+import { library } from "@fortawesome/fontawesome-svg-core";
+library.add(fab);
+
 const Footer: React.FC = () => {
   return (
     <div className="Footer">
-      <footer>
-        <h1>Rural Tech</h1>
-        <FacebookIcon />
-        {/* TODO: LINEのアイコンを配置。fontawesomeを検討する↓ */}
-        <img src="https://placehold.jp/80x90.png"></img>
-        <TwitterIcon />
-        <h4>Rural Tech ©︎ 2021</h4>
+      <footer className="Footer__wrapper">
+        <h1 className="Footer__logo">Rural Tech</h1>
+        <div className="Footer__snsicon-wrapper">
+          <FontAwesomeIcon
+            className="Footer__snsicon"
+            icon={["fab", "facebook-f"]}
+          />
+          <FontAwesomeIcon className="Footer__snsicon" icon={["fab", "line"]} />
+          <FontAwesomeIcon
+            className="Footer__snsicon"
+            icon={["fab", "twitter"]}
+          />
+        </div>
+        <h4 className="Footer__copy">Rural Tech ©︎ 2021</h4>
       </footer>
     </div>
   );
