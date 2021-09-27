@@ -1,0 +1,54 @@
+:root {
+    --header-width: 10%;
+    --window-width: calc((100vw - (100vw - 100%))* 0.9);
+}
+
+.heroContainer {
+  position: relative;
+  background-color: darkcyan;
+  width: var(--window-width);
+  &__image {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &__corporateName {
+    font-family: var(--my-font1);
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color:white;
+  }
+  &__message {
+    font-family: var(--my-font1);
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    color: white;
+  }
+}
+
+.Top__hero-container {
+    width: 100%;
+}
+.Top__icon {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(119, 182, 119);
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  color: white;
+  h2.heroImage__corporateName {
+    white-space: nowrap;
+    font-family: var(--my-font1);
+    font-weight: 100;
+    font-size: 40px;
+  }
+  h1 {
+    white-space: nowrap;
+    font-family: var(--my-font1);
+    font-weight: 100;
+    font-size: 150px;
+  }
+}
