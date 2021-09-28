@@ -1,29 +1,37 @@
-.heroImage {
-  width: 90vw;
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Noto+Sans+JP&family=Public+Sans:wght@300&family=Sawarabi+Gothic&display=swap');
+:root {
+  --my-font1: "Cantarell", sans-serif;
+  --my-font2: "Public Sans", sans-serif;
+  --my-font3: "Noto Sans JP", sans-serif;
+  --my-font4: "Sawarabi Gothic", sans-serif;
 }
-
-Top__hero-container {
-  position: relative;
-}
-.Top__icon {
+// reset css
+h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
-  background-color: rgb(119, 182, 119);
-  position: absolute;
-  top: 30%;
-  left: 45%;
-  transform: translate(-50%,-50%);
-  color: white;
-  h2 {
-    white-space: nowrap;
-    font-family: var(--my-font1);
-    font-weight: 100;
-    font-size: 40px;
-  }
-  h1 {
-    white-space: nowrap;
-    font-family: var(--my-font1);
-    font-weight: 100;
-    font-size: 150px;
-  }
 }
+.App {
+  width: 100vw;
+}
+// .Top__icon {
+//   margin: 0;
+//   padding: 0;
+//   background-color: rgb(119, 182, 119);
+//   position: absolute;
+//   top: 30%;
+//   left: 45%;
+//   transform: translate(-50%,-50%);
+//   color: white;
+//   h2 {
+//     white-space: nowrap;
+//     font-family: var(--my-font1);
+//     font-weight: 100;
+//     font-size: 40px;
+//   }
+//   h1 {
+//     white-space: nowrap;
+//     font-family: var(--my-font1);
+//     font-weight: 100;
+//     font-size: 150px;
+//   }
+// }
