@@ -18,7 +18,7 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
       <img src={props.image} width="470" height="320"></img>
       <h2>{props.date}</h2>
       <h1>{props.title}</h1>
-      <h2>{props.article}</h2>
+      <p>{props.article}</p>
     </div>
   );
 };
