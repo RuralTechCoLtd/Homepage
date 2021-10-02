@@ -14,12 +14,12 @@ type Props = {
 };
 const NewsArticle: React.FC<Props> = (props: Props) => {
   return (
-    <div>
+    <React.Fragment>
       <img src={props.image} width="470" height="320"></img>
       <h2>{props.date}</h2>
       <h1>{props.title}</h1>
       <p>{props.article}</p>
-    </div>
+    </React.Fragment>
   );
 };
 const News: React.FC = () => {

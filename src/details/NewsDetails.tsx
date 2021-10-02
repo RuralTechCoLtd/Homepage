@@ -8,10 +8,10 @@ type Props = {
 
 const NewsArticle: React.FC<Props> = (props: Props) => {
   return (
-    <div>
+    <React.Fragment>
       <img src={props.img}></img>
       <div>{props.article}</div>
-    </div>
+    </React.Fragment>
   );
 };
 

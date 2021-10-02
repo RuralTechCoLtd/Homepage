@@ -11,14 +11,14 @@ type Props = {
 
 const ArchiveArticle: React.FC<Props> = (props: Props) => {
   return (
-    <div>
+    <React.Fragment>
       <img src={props.image}></img>
       <h2>{props.title}</h2>
       <p>{props.sample}</p>
       <Link to={props.root}>
         <a>READ MORE...</a>
       </Link>
-    </div>
+    </React.Fragment>
   );
 };
 

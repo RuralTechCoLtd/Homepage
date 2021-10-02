@@ -5,7 +5,7 @@ import "./About.scss";
 
 const About: React.FC = () => {
   return (
-    <div>
+    <React.Fragment>
       <p>introduction</p>
       <p>
         オンラインサロンや
@@ -30,7 +30,7 @@ const About: React.FC = () => {
           About us <DoubleArrowIcon />
         </a>
       </Link>
-    </div>
+    </React.Fragment>
   );
 };
 
