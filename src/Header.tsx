@@ -145,37 +145,35 @@ const Header: React.FC = () => {
   );
 
   return (
-    <div>
-      <header className="Header">
-        <div className="Header__site-name">
-          <h1>Rural Tech</h1>
-        </div>
-        <div className="Header__hamburger-button">
-          {/* <button> */}
-          {(["right"] as Anchor[]).map((anchor) => (
-            <React.Fragment key={anchor}>
-              <Button
-                onClick={toggleDrawer(anchor, true)}
-                className="Header__hamburger-button-wrapper"
-              >
-                <MenuIcon style={{ color: "#fff" }} />
-              </Button>
-              <Drawer
-                anchor={anchor}
-                open={state[anchor]}
-                onClose={toggleDrawer(anchor, false)}
-              >
-                {list(anchor)}
-              </Drawer>
-            </React.Fragment>
-          ))}
-          {/* </button> */}
-        </div>
-        <div className="Header__scrolldown">
-          <h4>scroll down</h4>
-        </div>
-      </header>
-    </div>
+    <header className="Header">
+      <div className="Header__site-name">
+        <h1>Rural Tech</h1>
+      </div>
+      <div className="Header__hamburger-button">
+        {/* <button> */}
+        {(["right"] as Anchor[]).map((anchor) => (
+          <React.Fragment key={anchor}>
+            <Button
+              onClick={toggleDrawer(anchor, true)}
+              className="Header__hamburger-button-wrapper"
+            >
+              <MenuIcon style={{ color: "#fff" }} />
+            </Button>
+            <Drawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+            >
+              {list(anchor)}
+            </Drawer>
+          </React.Fragment>
+        ))}
+        {/* </button> */}
+      </div>
+      <div className="Header__scrolldown">
+        <h4>scroll down</h4>
+      </div>
+    </header>
   );
 };
 export default Header;

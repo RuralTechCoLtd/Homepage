@@ -11,7 +11,7 @@ type Props = {
 };
 const EventDetailsArticle: React.FC<Props> = (props: Props) => {
   return (
-    <div>
+    <React.Fragment>
       <h1>{props.heading}</h1>
       <h3>{props.date}</h3>
       <hr />
@@ -23,7 +23,7 @@ const EventDetailsArticle: React.FC<Props> = (props: Props) => {
       <hr />
       <h2>こんな事が出来るようになります</h2>
       <p>{props.ableto}</p>
-    </div>
+    </React.Fragment>
   );
 };
 

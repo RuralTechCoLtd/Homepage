@@ -11,13 +11,13 @@ type Props = {
 
 const EventListArticle: React.FC<Props> = (props: Props) => {
   return (
-    <div>
+    <React.Fragment>
       <hr />
       <img src={props.image}></img>
       <h2>{props.heading}</h2>
       <h3>{props.date}</h3>
       <p>{props.sampleArticle}</p>
-    </div>
+    </React.Fragment>
   );
 };
 

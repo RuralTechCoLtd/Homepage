@@ -7,8 +7,8 @@ library.add(fab);
 
 const Footer: React.FC = () => {
   return (
-    <div className="Footer">
-      <footer className="Footer__wrapper">
+    <footer className="Footer">
+      <div className="Footer__wrapper">
         <h1 className="Footer__logo">Rural Tech</h1>
         <div className="Footer__snsicon-wrapper">
           <FontAwesomeIcon
@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
           />
         </div>
         <h4 className="Footer__copy">Rural Tech ©︎ 2021</h4>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 
