@@ -10,24 +10,21 @@
 }
 .Header__site-name {
     margin: 0 auto;
-    font-family: var(--my-font1);
+    font-family: var(--my-font1),var(--my-font2);
     font-size: 25px;
     writing-mode: vertical-rl;
-    background-color: #AAA;
 }
 .Header__hamburger-button {
     display: block;
-    background-color: #AAA;;
     margin: 0 auto;
     position: relative;
     > button {
         border: none;
-        background-color:#AAA;
     }
 }
 .Header__scrolldown {
     margin: auto;
     font-family: var(--my-font1);
     writing-mode: vertical-rl;
-    background-color: #AAA;
+    margin-top: 100%;
 }
