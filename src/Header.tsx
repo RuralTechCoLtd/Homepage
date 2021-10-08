@@ -146,17 +146,11 @@ const Header: React.FC = () => {
 
   return (
     <header className="Header">
-      <div className="Header__site-name">
-        <h1>Rural Tech</h1>
-      </div>
+      <h1 className="Header__site-name">Rural Tech</h1>
       <div className="Header__hamburger-button">
-        {/* <button> */}
         {(["right"] as Anchor[]).map((anchor) => (
           <React.Fragment key={anchor}>
-            <Button
-              onClick={toggleDrawer(anchor, true)}
-              className="Header__hamburger-button-wrapper"
-            >
+            <Button onClick={toggleDrawer(anchor, true)}>
               <MenuIcon style={{ color: "#fff" }} />
             </Button>
             <Drawer
@@ -168,11 +162,8 @@ const Header: React.FC = () => {
             </Drawer>
           </React.Fragment>
         ))}
-        {/* </button> */}
       </div>
-      <div className="Header__scrolldown">
-        <h4>scroll down</h4>
-      </div>
+      <h4 className="Header__scrolldown">scroll down</h4>
     </header>
   );
 };

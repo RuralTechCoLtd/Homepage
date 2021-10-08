@@ -35,6 +35,7 @@ const Services: React.FC = () => {
         </ul>
       </ul>
       <article>
+        {/* TODO イメージのサイズはデフォルトサイズで固定されているのでレスポンシブ確認時に正しく動作しない。あらかじめwidthだけ％で指定しておいた方が良い場合もある */}
         <img
           src={AssistImage}
           alt="ServicesImage"
