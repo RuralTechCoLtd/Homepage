@@ -5,11 +5,11 @@
     color: #fff;
     width: 90%;
     height: 60vh;
-    position: relative;
 }
 
 .Footer__wrapper {
-    position: absolute;
+    position: relative;
+    display: table;
     top: 20%;
     left: 10%;
 }
