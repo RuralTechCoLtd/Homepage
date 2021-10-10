@@ -1,0 +1,10 @@
+.About {
+    height: 100vh;
+    background-color: yellowgreen;
+    &__container {
+        height: 60vh;
+        width: 60vw;
+        // padding-left: 30px;
+        background-color: purple;
+    }
+}
