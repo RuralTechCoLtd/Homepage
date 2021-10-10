@@ -150,7 +150,15 @@ const Header: React.FC = () => {
       <div className="Header__hamburger-button">
         {(["right"] as Anchor[]).map((anchor) => (
           <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}>
+            <Button
+              style={{
+                position: "relative",
+                top: "50%",
+                display: "block",
+                margin: "0 auto",
+              }}
+              onClick={toggleDrawer(anchor, true)}
+            >
               <MenuIcon style={{ color: "#fff" }} />
             </Button>
             <Drawer

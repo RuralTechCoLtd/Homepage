@@ -1,5 +1,4 @@
 .Header {
-    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -7,24 +6,28 @@
     background-color: #AAA;
     color: #FFF;
     width: 10%;
-}
-.Header__site-name {
-    margin: 0 auto;
-    font-family: var(--my-font1),var(--my-font2);
-    font-size: 25px;
-    writing-mode: vertical-rl;
-}
-.Header__hamburger-button {
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    > button {
-        border: none;
+    &__site-name {
+        position: absolute;
+        top: 5%;
+        left:50%;
+        transform:translateX(-50%) ;
+        font-family: var(--my-font1),var(--my-font2);
+        font-size: 45px;
+        writing-mode: vertical-rl;
     }
-}
-.Header__scrolldown {
-    margin: auto;
-    font-family: var(--my-font1);
-    writing-mode: vertical-rl;
-    margin-top: 100%;
+    &__hamburger-button {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__scrolldown {
+        font-family: var(--my-font1),var(--my-font2);
+        writing-mode: vertical-rl;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
