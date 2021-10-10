@@ -1,10 +1,59 @@
 .About {
+    width: 90%;
     height: 100vh;
     background-color: yellowgreen;
     &__container {
-        height: 60vh;
-        width: 60vw;
-        // padding-left: 30px;
+        margin: 0 auto;
+        font-family: var(--my-font1), var(--my-font2), 
+        var(--my-font3), var(--my-font4);
+        height: 70vh;
+        width: 85vw;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: row;
         background-color: purple;
+    }
+    &__introduction {
+        position: relative;
+        top: 40%;
+        transform: translateY(-5%);
+    }
+    &__copy {
+        writing-mode: vertical-lr;
+        position: relative;
+        top:40%;
+        transform: translateY(-5%);
+        margin: 0 30px;
+        font-size: 20px;
+        line-height: 2;
+        letter-spacing: 10px;
+    }
+    &__title {
+        display: table;
+        background-color: greenyellow;
+        font-size: 45px;
+        position: relative;
+        top: 20%;
+        white-space: nowrap;
+    }
+    &__article {
+        display: table;
+        background-color: greenyellow;
+        font-size: 18px;
+        position: relative;
+        top:30%;
+    }
+    &__link {
+        display: table;
+        background-color: greenyellow;
+        font-size: 18px;
+        position: relative;
+        top:40%;
+        padding-left: 40px;
+    }
+    &__childContainer {
+        background-color: gold;
     }
 }
