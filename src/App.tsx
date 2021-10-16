@@ -17,6 +17,7 @@ import "./App.scss";
 const App: React.FC = () => {
   return (
     <div className="App">
+      {/* TODO h1タグはページに一つしか使用できないので、ヒーローイメージのみに使用して残りはh2以降のタグを使用。 */}
       <Router>
         <Header />
         <ul>

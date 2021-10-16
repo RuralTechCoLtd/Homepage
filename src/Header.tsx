@@ -62,7 +62,7 @@ const Header: React.FC = () => {
 
       setState({ ...state, [anchor]: open });
     };
-
+  // リアクトフック実用例、アロー関数ではないVer
   const [hoge, setHoge] = useState<string>("");
 
   function huga(moge: string) {
