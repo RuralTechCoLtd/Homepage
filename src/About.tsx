@@ -25,18 +25,16 @@ const About: React.FC = () => {
             <br />
             お客さまのニーズに寄り添う業務アプリケーションも 作成します。
           </p>
-          <Link to="/About/AboutDetails">
-            <a className="About__link">
-              About us{" "}
-              <DoubleArrowIcon
-                style={{
-                  verticalAlign: "middle",
-                  border: "solid 1px",
-                  borderRadius: "50%",
-                  padding: "10px",
-                }}
-              />
-            </a>
+          <Link className="About__link" to="/About/AboutDetails">
+            About Us
+            <DoubleArrowIcon
+              style={{
+                verticalAlign: "middle",
+                border: "solid 1px",
+                borderRadius: "50%",
+                padding: "15px",
+              }}
+            />
           </Link>
         </div>
       </div>

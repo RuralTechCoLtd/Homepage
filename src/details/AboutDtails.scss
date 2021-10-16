@@ -1,0 +1,57 @@
+.AboutDetails {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
+    &__heroImage {
+			background: url("http://placehold.jp/1440x800.png"); 
+      height: 100vh;
+      width: 100%;
+			color: white;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+    }
+		&__childContainer {
+			position: relative;
+			top: 80%;
+			left:10%;
+		}
+		&__sub {
+			font-size: 25px;
+		}
+		&__title {
+			font-size: 70px;
+		}
+		&__article {
+			background-color: lawngreen;
+			width: 85%;
+			margin: 0 auto;
+		}
+		&__parag {
+			background-color: purple;
+			width: 90%;
+			padding:60px 0 80px;
+			margin: 0 auto;
+			line-height: 1.8;
+			font-size: 18px;
+		}
+		&__arts {
+			background-color: gold;
+			&__title {
+				line-height: 2em;
+				font-size: 30px;
+				text-align: center;
+				background-color: firebrick;
+			}
+			&__pics {
+				padding: 40px 0 0;
+				display: flex;
+				flex-direction: row;
+				img {
+					display: block;
+					width: 45%;
+					margin: 0 auto;
+				}
+			}
+		}
+}
