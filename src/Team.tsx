@@ -10,11 +10,11 @@ const Team: React.FC = () => {
   return (
     <div>
       {/* <img src={TeamImage} className="--team_image" /> */}
-      <h1>Team members</h1>
+      <h2>Team members</h2>
       <article>
         <img src={CEOimage} alt="Team__pic" />
-        <h2>代表取締役</h2>
-        <h1>山之内涼</h1>
+        <h3>代表取締役</h3>
+        <h2>山之内涼</h2>
         <p>
           異色の経歴を持つ彼、未経験から
           業界で経験を積み独自のアイデアで地方から改革を進めます。
@@ -23,8 +23,8 @@ const Team: React.FC = () => {
       </article>
       <article>
         <img src={RYOimage} alt="Team__pic" />
-        <h2>代表取締役</h2>
-        <h1>山之内涼</h1>
+        <h3>代表取締役</h3>
+        <h2>山之内涼</h2>
         <p>
           異色の経歴を持つ彼、未経験から
           業界で経験を積み独自のアイデアで地方から改革を進めます。
@@ -32,9 +32,7 @@ const Team: React.FC = () => {
         </p>
       </article>
       <Link to="/Greeting">
-        <a>
-          代表挨拶ページへ <DoubleArrowIcon />
-        </a>
+        代表挨拶ページへ <DoubleArrowIcon />
       </Link>
     </div>
   );

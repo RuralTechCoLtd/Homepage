@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="Footer">
       <div className="Footer__wrapper">
-        <h1 className="Footer__logo">Rural Tech</h1>
+        <h2 className="Footer__logo">Rural Tech</h2>
         <div className="Footer__snsicon-wrapper">
           <FontAwesomeIcon
             className="Footer__snsicon"

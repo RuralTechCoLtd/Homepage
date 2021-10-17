@@ -16,7 +16,7 @@ const About: React.FC = () => {
           地域貢献を
         </p>
         <div className="About__childContainer">
-          <h1 className="About__title">Rural Tech</h1>
+          <h2 className="About__title">Rural Tech</h2>
           <p className="About__article">
             ルーラルテックはITで地方から日本を元気づけます！
             先進のテクノロジーを地方から。

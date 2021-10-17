@@ -19,7 +19,7 @@ const Services: React.FC = () => {
 
   return (
     <div>
-      <h1>Services</h1>
+      <h2>Services</h2>
       <button onClick={setCloud}>cloud</button>
       <button onClick={setSeminar}>seminar</button>
       {content == "cloud" ? <h2>cloud</h2> : <h2>seminar</h2>}
@@ -56,7 +56,7 @@ const Services: React.FC = () => {
           alt="ServicesImage"
           className="Services__Image"
         />
-        <h1>Assist</h1>
+        <h2>Assist</h2>
         <p>-生産管理アプリケーション-</p>
         <p>
           工程の見える化と柔軟な管理を実現、従来のスプレッドシートでは管理が難しい業務も自動化し、

@@ -48,6 +48,7 @@ const Header: React.FC = () => {
     "CEOGREETING",
     "NEWS",
     "LINKS",
+    "TOP",
   ];
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -87,6 +88,16 @@ const Header: React.FC = () => {
           <ListItemText primary={text} />
           </ListItem>
         ))} */}
+        <NavLink to="/">
+          <div onClick={huga("moge")}>
+            <ListItem button key={navlist[5]}>
+              <ListItemIcon>
+                <AssistantPhotoIcon />
+              </ListItemIcon>
+              <ListItemText primary={navlist[5]} />
+            </ListItem>
+          </div>
+        </NavLink>
         <NavLink to="/About/AboutDetails">
           <div onClick={huga("moge")}>
             <ListItem button key={navlist[0]}>
@@ -146,7 +157,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="Header">
-      <h1 className="Header__site-name">Rural Tech</h1>
+      <h2 className="Header__site-name">Rural Tech</h2>
       <div className="Header__hamburger-button">
         {(["right"] as Anchor[]).map((anchor) => (
           <React.Fragment key={anchor}>
