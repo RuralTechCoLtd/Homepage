@@ -25,7 +25,7 @@ const EventList: React.FC = () => {
   return (
     <div className="EventList">
       <h3>Services</h3>
-      <h1>イベント一覧</h1>
+      <h2>イベント一覧</h2>
       <Link to="/Services/EventList/EventDetails">
         <EventListArticle
           image="https://placehold.jp/160x160.png"

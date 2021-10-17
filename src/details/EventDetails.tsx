@@ -12,7 +12,7 @@ type Props = {
 const EventDetailsArticle: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
-      <h1>{props.heading}</h1>
+      <h2>{props.heading}</h2>
       <h3>{props.date}</h3>
       <hr />
       <h2>イベント内容</h2>

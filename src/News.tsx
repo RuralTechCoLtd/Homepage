@@ -16,8 +16,8 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <img src={props.image} width="470" height="320"></img>
-      <h2>{props.date}</h2>
-      <h1>{props.title}</h1>
+      <h3>{props.date}</h3>
+      <h2>{props.title}</h2>
       <p>{props.article}</p>
     </React.Fragment>
   );
@@ -25,10 +25,8 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
 const News: React.FC = () => {
   return (
     <div className="News">
-      <h1>News</h1>
-      <Link to="/News/Archive">
-        <h3>Archive &gt;&gt;</h3>
-      </Link>
+      <h2>News</h2>
+      <Link to="/News/Archive">Archive &gt;&gt;</Link>
       <NewsArticle
         image={SampleImage1ForNews}
         date="Jan 27"

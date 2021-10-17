@@ -15,9 +15,7 @@ const ArchiveArticle: React.FC<Props> = (props: Props) => {
       <img src={props.image}></img>
       <h2>{props.title}</h2>
       <p>{props.sample}</p>
-      <Link to={props.root}>
-        <a>READ MORE...</a>
-      </Link>
+      <Link to={props.root}>READ MORE...</Link>
     </React.Fragment>
   );
 };
