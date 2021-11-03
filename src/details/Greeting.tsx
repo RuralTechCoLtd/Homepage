@@ -4,7 +4,7 @@ const Greeting: React.FC = () => {
   return (
     <div className="Greeting">
       <a>Team Members</a>
-      <h1>Rural Tech</h1>
+      <h2>Rural Tech</h2>
       <h2>代表取締役社長 山之内 涼</h2>
       <ul>
         <li>2021.4.1 株式会社○○○○入社</li>

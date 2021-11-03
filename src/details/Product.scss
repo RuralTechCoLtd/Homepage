@@ -1,0 +1,60 @@
+.CommonDetails {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
+    &__container {
+        width: 70%;
+        margin: 60px auto 0 auto;
+        // background-color: blueviolet;
+    }
+    &__back {
+        background-color: darkorange;
+        position: relative;
+        right: 50px;
+        font-size: 25px;
+        text-decoration: none;
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 10%;
+            vertical-align: middle;
+            background-color: black;
+        }
+    }
+    &__title {
+        // background-color: gold;
+        font-size: 60px;
+        line-height: 2;
+    }
+    &__sub {
+        font-size: 20px;
+        line-height: 4;
+        // background-color: greenyellow;
+    }
+    &__para {
+        padding: 30px 0;
+        // background-color: hotpink;
+        font-size: 18px;
+    }
+    &__slide {
+        // background-color: darkcyan;
+        padding: 60px 15%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        &__items {
+            background-color: darkorange;
+            margin: 0 60px 0 0;
+            display: table-cell;
+            display: inline-block;
+            > p {
+                line-height: 2;
+            }
+        }
+    }
+
+}

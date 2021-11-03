@@ -24,7 +24,7 @@ const NewsArchive: React.FC = () => {
   return (
     <div className="NewsArchive">
       <h3>Latest News</h3>
-      <h1>News Archive</h1>
+      <h2>News Archive</h2>
       <ArchiveArticle
         image="https://placehold.jp/750x500.png"
         title="INTERVIEW#10 We Work Here."

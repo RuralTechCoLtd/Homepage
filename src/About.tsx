@@ -29,6 +29,7 @@ const About: React.FC = () => {
             About Us
             <DoubleArrowIcon
               style={{
+                marginLeft: "15px",
                 verticalAlign: "middle",
                 border: "solid 1px",
                 borderRadius: "50%",
