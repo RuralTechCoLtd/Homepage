@@ -7,34 +7,40 @@
         font-family: var(--my-font1), var(--my-font2), 
         var(--my-font3), var(--my-font4);
         height: 70%;
-        width: 85vw;
+        width: 95%;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: row;
+        justify-content: center;
         // background-color: purple;
     }
     &__introduction {
+        white-space: nowrap;
         height: 40px;
         position: relative;
         top: 40%;
         transform: translateY(-5%);
         &::before {
-            content: "      ";
-            text-decoration: line-through;
-            display: inline;
-            height: 10px;
-            width: 10px;
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 10%;
+            vertical-align: middle;
+            background-color: black;
         }
     }
     &__copy {
+        font-weight: bold;
         writing-mode: vertical-lr;
         position: relative;
         top:40%;
         transform: translateY(-5%);
         height: 280px;
-        margin: 0 30px;
+        margin: 0 5%;
         font-size: 20px;
         line-height: 2;
         letter-spacing: 10px;
@@ -42,7 +48,7 @@
     &__title {
         display: table;
         // background-color: greenyellow;
-        font-size: 45px;
+        font-size: 60px;
         position: relative;
         top: 20%;
         white-space: nowrap;
@@ -55,11 +61,14 @@
         top:30%;
     }
     &__link {
+        // TODO リンクのエージェントスタイルの無効、編集。
         display: table;
         // background-color: greenyellow;
         font-size: 18px;
         position: relative;
         top:40%;
         padding-left: 80px;
+        text-decoration: none;
+        color:#aaa
     }
 }

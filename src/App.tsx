@@ -8,12 +8,18 @@ import NewsArchive from "./details/NewsArchive";
 import NewsDetails from "./details/NewsDetails";
 import Greeting from "./details/Greeting";
 import Services from "./Services";
-import ServicesDetails from "./details/ServicesDetails";
+import AssistDetails from "./details/AssistDetails";
+import EntrustedDevelopment from "./details/EntrustedDevelopment";
+import PackagedApplication from "./details/PackagedApplication";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.scss";
+import { useEffect } from "react";
 
 const App: React.FC = () => {
+  useEffect(() => {
+    document.title = `Rural Tech`;
+  });
   return (
     <div className="App">
       {/* TODO h1タグはページに一つしか使用できないので、ヒーローイメージのみに使用して残りはh2以降のタグを使用。 */}
@@ -31,7 +37,15 @@ const App: React.FC = () => {
           <Route path="/News/Archive" component={NewsArchive} />
           <Route path="/News/Details" component={NewsDetails} />
           <Route path="/Greeting" component={Greeting} />
-          <Route path="/ServiceDetails" component={ServicesDetails} />
+          <Route path="/Services/Assist" component={AssistDetails} />
+          <Route
+            path="/Services/EntrustedDevelopment"
+            component={EntrustedDevelopment}
+          />
+          <Route
+            path="/Services/PackagedApplication"
+            component={PackagedApplication}
+          />
         </Switch>
         <Footer />
       </Router>

@@ -1,3 +1,77 @@
-.Services__Image {
+.Services {
     width: 90%;
+    font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    &__title {
+        background-color: gold;
+        font-size: 60px;
+        line-height: 2;
+        text-align: center;
+    }
+    &__image {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+    &__container {
+        background-color: greenyellow;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    &__navlist {
+        list-style: none;
+        white-space: nowrap;
+        background-color: rgb(118, 205, 255);
+        margin:0 auto;
+        padding: 10% 0;
+        line-height: 2;
+        & > li::before {
+            width:  8px;               /* 幅指定 */
+            height:  8px;              /* 高さ指定 */
+            display:  inline-block;     /* インラインブロックにする */
+            background-color: #fff;  /* 背景色指定 */
+            border: 1px solid ;
+            margin-right: 5px;
+            content:  "";     /* 空の要素作成 */
+            }
+        & ul > li {
+            list-style: none;
+            cursor: pointer;
+            &::before {
+                content:  "";     /* 空の要素作成 */
+                width:  8px;               /* 幅指定 */
+                height:  8px;              /* 高さ指定 */
+                display:  inline-block;     /* インラインブロックにする */
+                background-color: #aaa;  /* 背景色指定 */
+                margin: 0 5px 0 10px;
+            }
+        }
+    }
+    &__contents {
+        background-color: indianred;
+        width: 70%;
+    }
+    &__name {
+        text-align: center;
+        font-size: 30px;
+        }
+    &__sub {
+        text-align: center;
+        font-size: 20px;
+        line-height: 3;
+    }
+    &__para {
+        font-size: 18px;
+    }
+    &__andmore {
+        font-size: 18px;
+        line-height: 8;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color:#aaa
+
+    }
 }

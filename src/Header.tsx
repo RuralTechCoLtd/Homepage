@@ -17,6 +17,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import AssistantPhotoIcon from "@material-ui/icons/AssistantPhoto";
+import WorkIcon from "@material-ui/icons/Work";
 import AppsIcon from "@material-ui/icons/Apps";
 import FaceIcon from "@material-ui/icons/Face";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
@@ -46,7 +47,7 @@ const Header: React.FC = () => {
     "ABOUT",
     "SERVICES",
     "CEOGREETING",
-    "NEWS",
+    "NEWS ARCHIVE",
     "LINKS",
     "TOP",
   ];
@@ -102,13 +103,13 @@ const Header: React.FC = () => {
           <div onClick={huga("moge")}>
             <ListItem button key={navlist[0]}>
               <ListItemIcon>
-                <AssistantPhotoIcon />
+                <WorkIcon />
               </ListItemIcon>
               <ListItemText primary={navlist[0]} />
             </ListItem>
           </div>
         </NavLink>
-        <Link to="/Services">
+        <Link to="/">
           <ListItem button key={navlist[1]}>
             <ListItemIcon>
               <AppsIcon />
@@ -116,7 +117,7 @@ const Header: React.FC = () => {
             <ListItemText primary={navlist[1]} />
           </ListItem>
         </Link>
-        <Link to="./details/Greeting">
+        <Link to="/Greeting">
           <ListItem button key={navlist[2]}>
             <ListItemIcon>
               <FaceIcon />
@@ -124,7 +125,7 @@ const Header: React.FC = () => {
             <ListItemText primary={navlist[2]} />
           </ListItem>
         </Link>
-        <Link to="./details/NewsArchive">
+        <Link to="/News/Archive">
           <ListItem button key={navlist[3]}>
             <ListItemIcon>
               <AnnouncementIcon />
@@ -135,15 +136,7 @@ const Header: React.FC = () => {
       </List>
       <Divider />
       <List>
-        {/* {navlist2.map((text, index) => (
-          <ListItem button key={text}>
-          <ListItemIcon>
-          {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
-        <Link to="./details/AboutDetails">
+        <Link to="/">
           <ListItem button key={navlist[4]}>
             <ListItemIcon>
               <LinkIcon />
@@ -170,7 +163,7 @@ const Header: React.FC = () => {
               }}
               onClick={toggleDrawer(anchor, true)}
             >
-              <MenuIcon style={{ color: "#fff" }} />
+              <MenuIcon fontSize="large" style={{ color: "#fff" }} />
             </Button>
             <Drawer
               anchor={anchor}
