@@ -1,0 +1,45 @@
+.EventList {
+    width: 90%;
+    padding-top: 60px;
+    font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    &__back {
+        background-color: hotpink;
+        text-decoration: none;
+        font-size: 25px;
+        margin-left: 5%;
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 40px;
+            margin-right: 10px;
+            border-radius: 10%;
+            vertical-align: middle;
+            background-color: black;
+            }
+        }
+        &__title {
+        margin-left: 5%;
+        font-size: 40px;
+        line-height: 2;
+        }    
+    &__contents {
+        background-color: greenyellow;
+        width: 80%;
+        margin: 30px auto;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        }
+    &__image {
+        padding-right: 20px;
+        width: 160px;
+        height: 160px;
+        vertical-align: middle;
+    }
+    &__article {
+        width: 100%;
+        background-color: hotpink;
+        word-wrap: break-word;
+    }
+}
