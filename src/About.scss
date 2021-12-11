@@ -19,6 +19,7 @@
     &__introduction {
         white-space: nowrap;
         height: 40px;
+        width: fit-content;
         position: relative;
         top: 40%;
         transform: translateY(-5%);
@@ -40,6 +41,7 @@
         top:40%;
         transform: translateY(-5%);
         height: 280px;
+        width: fit-content;
         margin: 0 5%;
         font-size: 20px;
         line-height: 2;
@@ -51,7 +53,6 @@
         font-size: 60px;
         position: relative;
         top: 20%;
-        white-space: nowrap;
     }
     &__article {
         display: table;
@@ -70,5 +71,54 @@
         padding-left: 80px;
         text-decoration: none;
         color:#aaa
+    }
+}
+@media screen and (max-width: 960px) {
+    .About {
+        width: 100vw;
+        height: fit-content;
+        &__container {
+            // background-color:greenyellow;
+            display: static;
+            transform: none;
+            flex-direction: column;
+            margin-top: 30px;
+            // background-color: skyblue;
+            height: fit-content;
+        }
+        &__introduction {
+            // background-color: royalblue;
+            margin-left: 10%;
+            position: static;
+            // margin:0 auto;
+        }
+        &__copy {
+            // background-color: salmon;
+            position: static;
+            writing-mode: horizontal-tb;
+            // left: 2%;
+            height: fit-content;
+            margin: 0 auto;
+        }
+        &__title {
+            position: static;
+            white-space: normal;
+        }
+        &__article {
+            position: static;
+        }
+        &__link {
+            position: static;
+            width: 40%;
+            // background-color: slateblue;
+            padding: 30px 0 0 0;
+            margin: 0 auto;
+        }
+        &__childContainer {
+            // background-color: sandybrown;
+            width: 80%;
+            position: static;
+            margin: 0 auto;
+        }
     }
 }

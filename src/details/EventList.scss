@@ -3,43 +3,81 @@
     padding-top: 60px;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__back {
-        background-color: hotpink;
-        text-decoration: none;
+        width: fit-content;
+        display: block;
+        position: relative;
+        left: 50px;
         font-size: 25px;
-        margin-left: 5%;
+        text-decoration: none;
+        color: #aaa;
         &::before {
             content: "";
             display: inline-block;
             height: 2px;
             width: 40px;
             margin-right: 10px;
-            border-radius: 10%;
+            border-radius: 10px;
             vertical-align: middle;
-            background-color: black;
-            }
+            background-color: #aaa;
         }
+        &:hover {
+            &::before {
+                transition: 1s;
+                content: "Back to";
+                display: inline-block;
+                width: fit-content;
+                height: fit-content;
+                margin-right: 10px;
+                border-radius: 10px;
+                vertical-align: 2px;
+                background-color: #aaa;
+                color:#fff;
+                }
+        }
+    }
         &__title {
         margin-left: 5%;
         font-size: 40px;
         line-height: 2;
         }    
     &__contents {
-        background-color: greenyellow;
         width: 80%;
         margin: 30px auto;
         text-decoration: none;
+        color: #444;
         display: flex;
         align-items: center;
         }
     &__image {
         padding-right: 20px;
         width: 160px;
-        height: 160px;
+        // height: 160px;
         vertical-align: middle;
     }
     &__article {
         width: 100%;
-        background-color: hotpink;
+        // background-color: hotpink;
         word-wrap: break-word;
+    }
+}
+@media screen and (max-width: 960px) {
+    .EventList {
+        width: 100vw;
+        &::before {
+            content: "";
+            display: block;
+            height: 10vh;
+            width: 100vw;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .EventList {
+        &__contents {
+            flex-direction: column;
+        }
+        &__image {
+            margin-bottom: 15px;
+        }
     }
 }

@@ -1,4 +1,5 @@
 .Header {
+    font-family: var(--my-font1),var(--my-font2);
     position: fixed;
     top: 0;
     right: 0;
@@ -8,11 +9,11 @@
     width: 10%;
     &__site-name {
         position: absolute;
+        width: fit-content;
         top: 5%;
         left:50%;
         transform:translateX(-50%) ;
-        font-family: var(--my-font1),var(--my-font2);
-        font-size: 45px;
+        font-size: 55px;
         writing-mode: vertical-rl;
     }
     &__hamburger-button {
@@ -23,11 +24,30 @@
         transform: translateX(-50%) translateY(-50%);
     }
     &__scrolldown {
-        font-family: var(--my-font1),var(--my-font2);
         writing-mode: vertical-rl;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 960px) {
+    .Header {
+        height: 10vh;
+        width: 100vw;
+        z-index: 100;
+        &__site-name {
+            font-size: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            writing-mode: horizontal-tb;
+        }
+        &__hamburger-button {
+            left: 90%;
+        }
+        &__scrolldown {
+            display: none;
+        }
     }
 }

@@ -134,7 +134,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="2021年○月○日午前10時 オンライン開催"
         para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/Services/EventList/EventDetails"
       ></Templates>
     );
   } else if (props.title === "kids") {
@@ -151,16 +151,10 @@ const Products: React.FC<Props> = (props: Props) => {
     );
   } else {
     return (
-      <h2
-        className="Services__default"
-        style={{
-          margin: "auto 0",
-          padding: "0 5%",
-          width: "60%",
-        }}
-      >
-        Celect products or services, event infomations from the list at the left
-        to see articles of them.
+      <h2 className="Services__default">
+        {window.innerWidth < 960
+          ? "Select products or services, event information from the list above to see articles of them."
+          : "Select products or services, event information from the list on the left to see articles of them."}
       </h2>
     );
   }
@@ -193,7 +187,7 @@ const Services: React.FC = () => {
   const setHosting = () => {
     setContent("hosting");
   };
-  const setJavaScrpt = () => {
+  const setJavaScript = () => {
     setContent("javascript");
   };
   const setWorker = () => {
@@ -203,41 +197,42 @@ const Services: React.FC = () => {
     setContent("kids");
   };
   return (
-    <div className="Services">
+    <div className="Services" id="Services">
       <h2 className="Services__title">Services</h2>
       <div className="Services__container">
-        <ul className="Services__navlist">
-          <li>クラウドアプリケーション開発</li>
-          <ul>
-            <li onClick={setEngineer}>受託開発</li>
-            <li onClick={setPackage}>パッケージアプリケーション開発</li>
-            <li onClick={setAssist}>Assist</li>
+        <div className="Services__childContainer">
+          <ul className="Services__navlist">
+            <li>クラウドアプリケーション開発</li>
+            <ul>
+              <li onClick={setEngineer}>受託開発</li>
+              <li onClick={setPackage}>パッケージアプリケーション開発</li>
+              <li onClick={setAssist}>Assist</li>
+            </ul>
           </ul>
-          <li>ICTセミナー</li>
-          <ul>
-            <li onClick={setHomepage}>ホームページ制作</li>
-            <li onClick={setGit}>Git</li>
-            <li onClick={setHosting}>ホスティング</li>
-            <li onClick={setJavaScrpt}>JavaScript</li>
+          <ul className="Services__navlist">
+            <li>ICTセミナー</li>
+            <ul>
+              <li onClick={setHomepage}>ホームページ制作</li>
+              <li onClick={setGit}>Git</li>
+              <li onClick={setHosting}>ホスティング</li>
+              <li onClick={setJavaScript}>JavaScript</li>
+            </ul>
           </ul>
-          <li>
-            <Link
-              to="Services/EventList"
-              style={{ textDecoration: "none", color: "blueviolet" }}
-            >
-              イベント予定(一覧)
-            </Link>
-          </li>
-          <ul>
-            <li onClick={setWorker}>社会人向けICTセミナー</li>
-            <li onClick={setKids}>
-              ICT人材育成 <br />
-              <span style={{ paddingLeft: "20px" }}>
-                キッズプログラミング教室
-              </span>
+          <ul className="Services__navlist">
+            <li>
+              <Link className="Services__navlist__link" to="Services/EventList">
+                イベント予定(一覧)
+              </Link>
             </li>
+            <ul>
+              <li onClick={setWorker}>社会人向けICTセミナー</li>
+              <li onClick={setKids}>
+                ICT人材育成 <br />
+                キッズプログラミング教室
+              </li>
+            </ul>
           </ul>
-        </ul>
+        </div>
         <Products title={content} />
       </div>
     </div>
