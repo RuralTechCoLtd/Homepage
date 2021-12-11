@@ -7,12 +7,12 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -23,19 +23,53 @@ import FaceIcon from "@material-ui/icons/Face";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
 import LinkIcon from "@material-ui/icons/Link";
 import MenuIcon from "@material-ui/icons/Menu";
+import { HourglassEmpty } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   list: {
-    width: 500,
+    // position: "relative",
+    // top: "50%",
+    // transform: "translateY(-50%)",
+    width: "40vw",
+    backgroundColor: "#aaa",
+    color: "white",
+    "& .MuiListItemText-root": {
+      color: "white",
+      textDecoration: "none",
+    },
+    "& .MuiListItemText-root span": {
+      textDecoration: "none",
+    },
   },
-  fullList: {
-    width: "auto",
+  // fullList: {
+  //   width: "auto",
+  //   backgroundColor: "green",
+  // },
+  root: {
+    height: "100vh",
+    backgroundColor: "#aaa",
+    position: "relative",
+  },
+  text: {
+    color: "white",
+    textDecoration: "none",
+    fontSize: "large",
+  },
+});
+
+const theme = createTheme({
+  typography: {
+    fontSize: 25,
   },
 });
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
 const Header: React.FC = () => {
+  function foo(bar: any) {
+    console.log(bar);
+  }
+
   const classes = useStyles();
   const [state, setState] = useState({
     top: false,
@@ -65,23 +99,19 @@ const Header: React.FC = () => {
       setState({ ...state, [anchor]: open });
     };
   // リアクトフック実用例、アロー関数ではないVer
-  const [hoge, setHoge] = useState<string>("");
-
-  function huga(moge: string) {
-    console.log(moge);
-    return undefined;
-  }
   const list = (anchor: Anchor) => (
-    <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom",
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {/* {navlist.map((text, index) => (
+    <div className={classes.root}>
+      <div
+        className={classes.list}
+        // className={clsx(classes.list, {
+        //   [classes.fullList]: anchor === "top" || anchor === "bottom",
+        // })}
+        role="presentation"
+        onClick={toggleDrawer(anchor, false)}
+        onKeyDown={toggleDrawer(anchor, false)}
+      >
+        <List>
+          {/* {navlist.map((text, index) => (
           <ListItem button key={text}>
           <ListItemIcon>
           {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -89,62 +119,120 @@ const Header: React.FC = () => {
           <ListItemText primary={text} />
           </ListItem>
         ))} */}
-        <NavLink to="/">
-          <div onClick={huga("moge")}>
-            <ListItem button key={navlist[5]}>
-              <ListItemIcon>
-                <AssistantPhotoIcon />
+          <ListItem button key={navlist[5]} component={NavLink} to="/">
+            <ListItemIcon className={classes.text}>
+              <AssistantPhotoIcon />
+            </ListItemIcon>
+            <ListItemText primary={navlist[5]} className={classes.text} />
+          </ListItem>
+          <ListItem
+            button
+            key={navlist[0]}
+            component={NavLink}
+            to="/About/AboutDetails"
+          >
+            <ListItemIcon className={classes.text}>
+              <WorkIcon />
+            </ListItemIcon>
+            <ListItemText primary={navlist[0]} />
+          </ListItem>
+          {/* <NavLink
+            to="/#Services"
+            isActive={() => {
+              return window.location.hash === "#Services";
+            }}
+          >
+            <ListItem>
+              <ListItemIcon className={classes.text}>
+                <AppsIcon />
               </ListItemIcon>
-              <ListItemText primary={navlist[5]} />
+              <ListItemText primary={navlist[1]} />
             </ListItem>
-          </div>
-        </NavLink>
-        <NavLink to="/About/AboutDetails">
-          <div onClick={huga("moge")}>
-            <ListItem button key={navlist[0]}>
-              <ListItemIcon>
-                <WorkIcon />
-              </ListItemIcon>
-              <ListItemText primary={navlist[0]} />
-            </ListItem>
-          </div>
-        </NavLink>
-        <Link to="/">
-          <ListItem button key={navlist[1]}>
-            <ListItemIcon>
+          </NavLink> */}
+          {/* <ListItem
+            button
+            key={navlist[1]}
+            component={() => {
+              return NavLink({
+                to: "/#Services",
+                isActive: () => {
+                  return window.location.hash === "#Services";
+                },
+              });
+            }}
+          >
+            <ListItemIcon className={classes.text}>
               <AppsIcon />
             </ListItemIcon>
             <ListItemText primary={navlist[1]} />
-          </ListItem>
-        </Link>
-        <Link to="/Greeting">
-          <ListItem button key={navlist[2]}>
-            <ListItemIcon>
+          </ListItem> */}
+          // kesitemoiiyo
+          <NavLink
+            to="/#Services"
+            isActive={() => {
+              return window.location.hash === "#Services";
+            }}
+          >
+            <ListItem>
+              <ListItemIcon className={classes.text}>
+                <AppsIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={navlist[1]}
+                onClick={() => {
+                  foo(NavLink);
+                }}
+              />
+            </ListItem>
+          </NavLink>
+          // kesitemoiiyo
+          {/* <ListItem
+            button
+            key={navlist[1]}
+            component={() => {
+              return NavLink({
+                to: "/#Services",
+                isActive: () => {
+                  return window.location.hash === "#Services";
+                },
+              });
+            }}
+          >
+            <ListItemIcon className={classes.text}>
+              <AppsIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={navlist[1]}
+              onClick={() => {
+                foo(NavLink);
+              }}
+            />
+          </ListItem> */}
+          <ListItem button key={navlist[2]} component={NavLink} to="/Greeting">
+            <ListItemIcon className={classes.text}>
               <FaceIcon />
             </ListItemIcon>
             <ListItemText primary={navlist[2]} />
           </ListItem>
-        </Link>
-        <Link to="/News/Archive">
-          <ListItem button key={navlist[3]}>
-            <ListItemIcon>
+          <ListItem
+            button
+            key={navlist[3]}
+            component={NavLink}
+            to="/News/Archive"
+          >
+            <ListItemIcon className={classes.text}>
               <AnnouncementIcon />
             </ListItemIcon>
             <ListItemText primary={navlist[3]} />
           </ListItem>
-        </Link>
-      </List>
-      <Divider />
-      <List>
-        <Link to="/">
-          <ListItem button key={navlist[4]}>
-            <ListItemIcon>
+          <ListItem button key={navlist[4]} component={NavLink} to="/">
+            <ListItemIcon className={classes.text}>
               <LinkIcon />
             </ListItemIcon>
             <ListItemText primary={navlist[4]} />
           </ListItem>
-        </Link>
-      </List>
+        </List>
+      </div>
     </div>
   );
 
@@ -163,7 +251,9 @@ const Header: React.FC = () => {
               }}
               onClick={toggleDrawer(anchor, true)}
             >
-              <MenuIcon fontSize="large" style={{ color: "#fff" }} />
+              <ThemeProvider theme={theme}>
+                <MenuIcon style={{ color: "#fff" }} />
+              </ThemeProvider>
             </Button>
             <Drawer
               anchor={anchor}

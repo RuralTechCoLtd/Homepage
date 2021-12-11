@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             icon={["fab", "twitter"]}
           />
         </div>
-        <h4 className="Footer__copy">Rural Tech ©︎ 2021</h4>
+        <h4 className="Footer__copyright">Rural Tech ©︎ 2021</h4>
       </div>
     </footer>
   );
