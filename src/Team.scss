@@ -1,0 +1,110 @@
+.Team {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    background-color: #FAEDED;
+    &__top {
+        width: 90%;
+        height: 100vh;
+        background-image: url("http://placehold.jp/1440x980.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        &__svg {
+            position: absolute;
+            width: 90vw;
+            transform: translateY(-99%);
+        }
+    }
+    &__title {
+        padding-bottom: 1em;
+    }
+    &__bottom {
+        width: 90vw;
+    }
+    &__wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }&__title {
+        font-size: 60px;
+        text-align: center;
+    }
+    &__img {
+        width: 45%;
+        border-radius: 10px;
+    }
+    &__post {
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+    }
+    &__name {
+        font-size: 30px;
+        line-height: 2;
+        text-align: center;
+    }
+    &__para {
+        font-size: 18px;
+    }
+    &__container {
+        color: #333;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    &__odd {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__even {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    &__toGreeting {
+        text-decoration: none;
+        display: block;
+        text-align: right;
+        font-size: 20px;
+        color: #666;
+        position: relative;
+        top: 30px
+        // background-color: royalblue;
+    }
+}
+@media screen and (max-width: 960px) {
+    .Team {
+        width: 100vw;
+        &__img {
+            width: 100%;
+        }
+        &__odd {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+
+        }
+        &__even {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        &__container {
+            width: 100%;
+        }
+        &__post {
+            line-height: 3;
+        }
+        &__top {
+            width: 100vw;
+            &__svg {
+                width: 100vw;
+            }
+        }
+        &__bottom {
+            width: 100vw;
+        }
+    }
+}
