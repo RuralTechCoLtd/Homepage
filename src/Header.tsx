@@ -1,12 +1,7 @@
 import "./Header.scss";
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { makeStyles } from "@material-ui/core/styles";
 import { createTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
@@ -23,14 +18,11 @@ import FaceIcon from "@material-ui/icons/Face";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
 import LinkIcon from "@material-ui/icons/Link";
 import MenuIcon from "@material-ui/icons/Menu";
-import { HourglassEmpty } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   list: {
-    // position: "relative",
-    // top: "50%",
-    // transform: "translateY(-50%)",
-    width: "40vw",
+    width: "80vw",
+    maxWidth: "300px",
     backgroundColor: "#aaa",
     color: "white",
     "& .MuiListItemText-root": {
@@ -41,10 +33,6 @@ const useStyles = makeStyles({
       textDecoration: "none",
     },
   },
-  // fullList: {
-  //   width: "auto",
-  //   backgroundColor: "green",
-  // },
   root: {
     height: "100vh",
     backgroundColor: "#aaa",
@@ -78,12 +66,12 @@ const Header: React.FC = () => {
     right: false,
   });
   const navlist: string[] = [
+    "TOP",
     "ABOUT",
     "SERVICES",
     "CEOGREETING",
     "NEWS ARCHIVE",
     "LINKS",
-    "TOP",
   ];
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -98,7 +86,6 @@ const Header: React.FC = () => {
 
       setState({ ...state, [anchor]: open });
     };
-  // リアクトフック実用例、アロー関数ではないVer
   const list = (anchor: Anchor) => (
     <div className={classes.root}>
       <div
@@ -111,30 +98,22 @@ const Header: React.FC = () => {
         onKeyDown={toggleDrawer(anchor, false)}
       >
         <List>
-          {/* {navlist.map((text, index) => (
-          <ListItem button key={text}>
-          <ListItemIcon>
-          {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
-          <ListItem button key={navlist[5]} component={NavLink} to="/">
+          <ListItem button key={navlist[0]} component={HashLink} to="/#">
             <ListItemIcon className={classes.text}>
               <AssistantPhotoIcon />
             </ListItemIcon>
-            <ListItemText primary={navlist[5]} className={classes.text} />
+            <ListItemText primary={navlist[0]} className={classes.text} />
           </ListItem>
           <ListItem
             button
-            key={navlist[0]}
+            key={navlist[1]}
             component={NavLink}
             to="/About/AboutDetails"
           >
             <ListItemIcon className={classes.text}>
               <WorkIcon />
             </ListItemIcon>
-            <ListItemText primary={navlist[0]} />
+            <ListItemText primary={navlist[1]} />
           </ListItem>
           {/* <NavLink
             to="/#Services"
@@ -166,26 +145,26 @@ const Header: React.FC = () => {
             </ListItemIcon>
             <ListItemText primary={navlist[1]} />
           </ListItem> */}
-          // kesitemoiiyo
-          <NavLink
+          {/* // kesitemoiiyo */}
+          {/* <NavLink
             to="/#Services"
             isActive={() => {
               return window.location.hash === "#Services";
             }}
-          >
-            <ListItem>
-              <ListItemIcon className={classes.text}>
-                <AppsIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary={navlist[1]}
-                onClick={() => {
-                  foo(NavLink);
-                }}
-              />
-            </ListItem>
-          </NavLink>
-          // kesitemoiiyo
+          > */}
+          <ListItem component={HashLink} to="/#Services">
+            <ListItemIcon className={classes.text}>
+              <AppsIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={navlist[2]}
+              // onClick={() => {
+              //   foo(NavLink);
+              // }}
+            />
+          </ListItem>
+          {/* </NavLink>
+          // kesitemoiiyo */}
           {/* <ListItem
             button
             key={navlist[1]}
@@ -208,28 +187,28 @@ const Header: React.FC = () => {
               }}
             />
           </ListItem> */}
-          <ListItem button key={navlist[2]} component={NavLink} to="/Greeting">
+          <ListItem button key={navlist[3]} component={NavLink} to="/Greeting">
             <ListItemIcon className={classes.text}>
               <FaceIcon />
             </ListItemIcon>
-            <ListItemText primary={navlist[2]} />
+            <ListItemText primary={navlist[3]} />
           </ListItem>
           <ListItem
             button
-            key={navlist[3]}
+            key={navlist[4]}
             component={NavLink}
             to="/News/Archive"
           >
             <ListItemIcon className={classes.text}>
               <AnnouncementIcon />
             </ListItemIcon>
-            <ListItemText primary={navlist[3]} />
+            <ListItemText primary={navlist[4]} />
           </ListItem>
-          <ListItem button key={navlist[4]} component={NavLink} to="/">
+          <ListItem button key={navlist[5]} component={HashLink} to="/#Footer">
             <ListItemIcon className={classes.text}>
               <LinkIcon />
             </ListItemIcon>
-            <ListItemText primary={navlist[4]} />
+            <ListItemText primary={navlist[5]} />
           </ListItem>
         </List>
       </div>
