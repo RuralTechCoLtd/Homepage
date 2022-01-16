@@ -7,7 +7,7 @@ library.add(fab);
 
 const Footer: React.FC = () => {
   return (
-    <footer className="Footer">
+    <footer className="Footer" id="Footer">
       <div className="Footer__wrapper">
         <h2 className="Footer__logo">Rural Tech</h2>
         <div className="Footer__snsicon-wrapper">
