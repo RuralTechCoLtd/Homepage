@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Services.scss";
 import AssistImage from "./images/soucecodeIMGL9025_TP_V.jpg";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
@@ -60,7 +60,7 @@ const Products: React.FC<Props> = (props: Props) => {
         alt="entrusted development"
         name="受託開発"
         sub="-Entrusted development-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##"
         to="/Services/EntrustedDevelopment"
       ></Templates>
@@ -69,10 +69,10 @@ const Products: React.FC<Props> = (props: Props) => {
     return (
       <Templates
         src="https://placehold.jp/760x520.png"
-        alt="package aplications"
+        alt="package applications"
         name="パッケージアプリケーション開発"
-        sub="-Package aplications-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        sub="-Package applications-"
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="/Services/PackagedApplication"
       ></Templates>
@@ -84,7 +84,7 @@ const Products: React.FC<Props> = (props: Props) => {
         alt="making homepage"
         name="ホームページ制作"
         sub="-Seminar for make homepages-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="#"
       ></Templates>
@@ -95,8 +95,8 @@ const Products: React.FC<Props> = (props: Props) => {
         src="https://placehold.jp/760x520.png"
         alt="git seminar"
         name="Git"
-        sub="-Seminer for Git-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        sub="-Seminar for Git-"
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="#"
       ></Templates>
@@ -108,7 +108,7 @@ const Products: React.FC<Props> = (props: Props) => {
         alt="hosting"
         name="ホスティング"
         sub="-Seminar for Hosting service-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="#"
       ></Templates>
@@ -117,10 +117,10 @@ const Products: React.FC<Props> = (props: Props) => {
     return (
       <Templates
         src="https://placehold.jp/760x520.png"
-        alt="javascript seminer"
+        alt="javascript seminar"
         name="JavaScript"
-        sub="-Seminer for JavaScript-"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        sub="-Seminar for JavaScript-"
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="#"
       ></Templates>
@@ -132,7 +132,7 @@ const Products: React.FC<Props> = (props: Props) => {
         alt="seminar for workers"
         name="社会人向けICTセミナー"
         sub="2021年○月○日午前10時 オンライン開催"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="/Services/EventList/EventDetails"
       ></Templates>
@@ -144,18 +144,23 @@ const Products: React.FC<Props> = (props: Props) => {
         alt="seminar for kids"
         name="ICT人材育成 キッズプログラミング教室"
         sub="2021年○月○日午前10時 会場：〇〇市役所２階会議室"
-        para="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
         to="#"
       ></Templates>
     );
   } else {
     return (
-      <h2 className="Services__default">
-        {window.innerWidth < 960
-          ? "Select products or services, event information from the list above to see articles of them."
-          : "Select products or services, event information from the list on the left to see articles of them."}
-      </h2>
+      <>
+        <h2 className="Services__default">
+          Select products or services, event information from the list on the
+          left to see articles of them.
+        </h2>
+        <h2 className="Services__default__mobile">
+          Select products or services, event information from the list above to
+          see articles of them.
+        </h2>
+      </>
     );
   }
 };
