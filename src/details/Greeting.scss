@@ -3,7 +3,7 @@
     padding-top: 60px;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__container {
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
     }
     &__back {
@@ -48,9 +48,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 60px 0 30px;
+    }
+    &__grandChildContainer {
+        padding-right: 5px;
     }
     &__RuralTech {
         font-size: 60px;
+        line-height: 2;
     }
     &__post {
         font-size: 30px;
@@ -62,6 +67,9 @@
     &__title {
         font-size: 25px;
         line-height: 3;
+    }
+    &__para {
+        padding: 30px 0 60px;
     }
 }
 @media screen and (max-width: 960px) {

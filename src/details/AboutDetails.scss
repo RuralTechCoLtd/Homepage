@@ -1,0 +1,93 @@
+.AboutDetails {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
+    &__heroImage {
+			background: url("../images/gracia-dharma-YwAiu9TU6zM-unsplash.jpg"); 
+      height: 100vh;
+      width: 100%;
+			color: white;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+    }
+		&__childContainer {
+			width: fit-content;
+			position: relative;
+			top: 80%;
+			left:10%;
+		}
+		&__sub {
+			font-size: 25px;
+			width: fit-content;
+		}
+		&__title {
+			font-size: 70px;
+			width: fit-content;
+		}
+		&__article {
+			// background-color: lawngreen;
+			width: 85%;
+			margin: 0 auto;
+		}
+		&__parag {
+			// background-color: purple;
+			width: 90%;
+			padding:60px 0 80px;
+			margin: 0 auto;
+			line-height: 1.8;
+			font-size: 18px;
+		}
+		&__arts {
+			// background-color: gold;
+			&__title {
+				line-height: 2em;
+				font-size: 30px;
+				text-align: center;
+				// background-color: firebrick;
+			}
+			&__pics {
+				padding: 80px 0 0;
+				display: flex;
+				flex-direction: row;
+				img {
+					display: block;
+					width: 45%;
+					margin: 0 auto;
+				}
+			}
+		}
+}
+@media screen and (max-width: 960px) {
+    .AboutDetails {
+        width: 100vw;
+		&__childContainer {
+			top: 70%
+		}
+		&__heroImage {
+			width: 100%;
+		}
+		&__article {
+			width: 90%;
+		}
+		&__title {
+			font-size: 50px;
+		}
+		&__parag {
+			padding: 40px 0 40px;
+		}
+		&__arts {
+			&__title {
+				line-height: 1.5;
+			}
+			&__pics {
+				flex-direction: column;
+				padding: 40px 0 0;
+				img {
+					width: 100%;
+					padding: 10px 0;
+				}
+			}
+		}
+    }
+}
