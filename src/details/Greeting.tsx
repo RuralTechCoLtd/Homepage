@@ -25,7 +25,7 @@ const Greeting: React.FC = () => {
           ></img>
         </div>
         <h3 className="Greeting__title">代表挨拶</h3>
-        <p>
+        <p className="Greeting__para">
           私が代表を務めるこのRural
           Techは、地方から新しいムーブメントを起こし日本全体を変えていくことを
           重要な目標としています。一つは日本全体のICT普及に貢献すること。産業技術や基礎研究の分野では高い
