@@ -1,8 +1,8 @@
 import React from "react";
-import "./AboutDtails.scss";
-const AboutDtails: React.FC = () => {
+import "./AboutDetails.scss";
+const AboutDetails: React.FC = () => {
   return (
-    <div className="AboutDetails">
+    <div className="AboutDetails" id="AboutUs">
       <div className="AboutDetails__heroImage">
         <div className="AboutDetails__childContainer">
           <h3 className="AboutDetails__sub">About Us</h3>
@@ -56,4 +56,4 @@ const AboutDtails: React.FC = () => {
   );
 };
 
-export default AboutDtails;
+export default AboutDetails;
