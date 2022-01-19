@@ -50,7 +50,7 @@ const Team: React.FC = () => {
               transform="translate(0 4730.405)"
               fill="#faeded"
               stroke="#faeded"
-              stroke-width="1"
+              strokeWidth="1"
             />
           </g>
         </g>
@@ -131,7 +131,7 @@ const Team: React.FC = () => {
             transform="translate(0 4730.405)"
             fill="#faeded"
             stroke="#faeded"
-            stroke-width="1"
+            strokeWidth="1"
           />
         </g>
       </svg>
