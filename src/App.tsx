@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import Header from "./Header";
+import ScrollToTop from "./ScrollToTop";
+import Services from "./Services";
+import Footer from "./Footer";
+
 import Top from "./Top";
 import EventList from "./details/EventList";
 import EventDetails from "./details/EventDetails";
@@ -7,15 +14,11 @@ import AboutDetails from "./details/AboutDetails";
 import NewsArchive from "./details/NewsArchive";
 import NewsDetails from "./details/NewsDetails";
 import Greeting from "./details/Greeting";
-import Services from "./Services";
 import AssistDetails from "./details/AssistDetails";
 import EntrustedDevelopment from "./details/EntrustedDevelopment";
 import PackagedApplication from "./details/PackagedApplication";
-import Header from "./Header";
-import Footer from "./Footer";
+
 import "./App.scss";
-import { useEffect } from "react";
-import ScrollToTop from "./ScrollToTop";
 
 const App: React.FC = () => {
   useEffect(() => {
