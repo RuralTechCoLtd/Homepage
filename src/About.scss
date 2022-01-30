@@ -1,28 +1,26 @@
 .About {
     width: 90%;
     height: 100vh;
-    // background-color: yellowgreen;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
     &__container {
-        margin: 0 auto;
-        font-family: var(--my-font1), var(--my-font2), 
-        var(--my-font3), var(--my-font4);
-        height: 70%;
-        width: 95%;
+        display: flex;
+        flex-direction: row;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        display: flex;
-        flex-direction: row;
         justify-content: center;
-        // background-color: purple;
+        margin: 0 auto;
+        height: 70%;
+        width: 95%;
     }
     &__introduction {
-        white-space: nowrap;
-        height: 40px;
-        width: fit-content;
         position: relative;
         top: 40%;
         transform: translateY(-5%);
+        white-space: nowrap;
+        height: 40px;
+        width: fit-content;
         &::before {
             content: "";
             display: inline-block;
@@ -35,8 +33,6 @@
         }
     }
     &__copy {
-        font-weight: bold;
-        writing-mode: vertical-lr;
         position: relative;
         top:40%;
         transform: translateY(-5%);
@@ -44,31 +40,29 @@
         width: fit-content;
         margin: 0 5%;
         font-size: 20px;
+        font-weight: bold;
+        writing-mode: vertical-lr;
         line-height: 2;
         letter-spacing: 10px;
     }
     &__title {
         display: table;
-        // background-color: greenyellow;
-        font-size: 60px;
         position: relative;
         top: 20%;
+        font-size: 60px;
     }
     &__article {
         display: table;
-        // background-color: greenyellow;
-        font-size: 18px;
         position: relative;
         top:30%;
+        font-size: 18px;
     }
     &__link {
-        // TODO リンクのエージェントスタイルの無効、編集。
         display: table;
-        // background-color: greenyellow;
-        font-size: 18px;
         position: relative;
         top:40%;
         padding-left: 80px;
+        font-size: 18px;
         text-decoration: none;
         color:#aaa
     }
@@ -78,27 +72,21 @@
         width: 100vw;
         height: fit-content;
         &__container {
-            // background-color:greenyellow;
             display: static;
             transform: none;
             flex-direction: column;
             margin-top: 30px;
-            // background-color: skyblue;
             height: fit-content;
         }
         &__introduction {
-            // background-color: royalblue;
-            margin-left: 10%;
             position: static;
-            // margin:0 auto;
+            margin-left: 10%;
         }
         &__copy {
-            // background-color: salmon;
             position: static;
-            writing-mode: horizontal-tb;
-            // left: 2%;
             height: fit-content;
             margin: 0 auto;
+            writing-mode: horizontal-tb;
         }
         &__title {
             position: static;
@@ -109,16 +97,14 @@
         }
         &__link {
             position: static;
-            width: 40%;
-            // background-color: slateblue;
             padding: 30px 0 0 0;
             margin: 0 auto;
+            width: 40%;
         }
         &__childContainer {
-            // background-color: sandybrown;
-            width: 80%;
             position: static;
             margin: 0 auto;
+            width: 80%;
         }
     }
 }

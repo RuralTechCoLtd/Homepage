@@ -9,28 +9,27 @@
     &__toArchive {
         display: block;
         position: absolute;
-        text-decoration: none;
-        font-size: 30px;
         right: 12%;
         transform: translateY(-60px);
+        font-size: 30px;
+        text-decoration: none;
     }
     &__container {
-        width: 100%;
-        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
+        margin: 0 auto;
     }
     &__item {
-        text-decoration: none;
-        color: #3b3b3b;
         margin: 15px 15px;
         padding: 15px 15px;
         border-radius: 20px;
         width: calc((1440px * 0.9 - 240px) / 3);
+        text-decoration: none;
+        color: #3b3b3b;
         &:hover {
             transition: 0.8s;
-            // background-color: rgb(202, 250, 250);
             background-color: #aaa;
             color: #fff;
         }
