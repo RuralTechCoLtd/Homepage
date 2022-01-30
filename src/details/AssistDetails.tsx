@@ -1,6 +1,9 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+
 import "./Product.scss";
+
 const AssistDetails: React.FC = () => {
   return (
     <div className="CommonDetails">

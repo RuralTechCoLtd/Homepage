@@ -1,5 +1,7 @@
 import React from "react";
+
 import "./AboutDetails.scss";
+
 const AboutDetails: React.FC = () => {
   return (
     <div className="AboutDetails" id="AboutUs">

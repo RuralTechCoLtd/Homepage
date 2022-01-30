@@ -1,11 +1,14 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+
 import CEOimage from "./images/CEOimage.jpg";
 import RYOimage from "./images/RYOimage.jpg";
-import "./Team.scss";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import { createTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
+
+import "./Team.scss";
 
 const teamTheme = createTheme({
   typography: {

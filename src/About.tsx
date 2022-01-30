@@ -1,6 +1,9 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+
 import "./About.scss";
 
 const About: React.FC = () => {
