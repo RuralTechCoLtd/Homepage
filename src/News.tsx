@@ -1,10 +1,12 @@
 import React from "react";
-import "./News.scss";
+
 import { Link } from "react-router-dom";
 
 import SampleImage1ForNews from "./images/designMaterial/article/MacBookOverDesk.webp";
 import SampleImage2ForNews from "./images/designMaterial/article/MultiplePcOverDesk.webp";
 import SampleImage3ForNews from "./images/designMaterial/article/MaritimeTerrace.webp";
+
+import "./News.scss";
 
 type Props = {
   image: string;

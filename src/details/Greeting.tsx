@@ -1,7 +1,9 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 import "./Greeting.scss";
+
 const Greeting: React.FC = () => {
   return (
     <div className="Greeting">

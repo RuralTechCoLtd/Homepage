@@ -1,5 +1,5 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+
 import { useLocation, withRouter } from "react-router-dom";
 
 const ScrollToTop: React.FC = () => {

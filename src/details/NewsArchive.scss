@@ -1,6 +1,6 @@
 .NewsArchive {
-    width: 90%;
     padding-top: 60px;
+    width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__container {
         width: 80%;
@@ -16,10 +16,10 @@
         &::before {
             content: "";
             display: inline-block;
-            height: 2px;
-            width: 40px;
             margin-right: 10px;
             border-radius: 10px;
+            height: 2px;
+            width: 40px;
             vertical-align: middle;
             background-color: #aaa;
         }
@@ -28,10 +28,10 @@
                 transition: 1s;
                 content: "Back to";
                 display: inline-block;
-                width: fit-content;
-                height: fit-content;
                 margin-right: 10px;
                 border-radius: 10px;
+                width: fit-content;
+                height: fit-content;
                 vertical-align: 2px;
                 background-color: #aaa;
                 color:#fff;
@@ -44,28 +44,28 @@
     }
     &__item {
         display: flex;
+        padding: 0 0 60px 0;
         justify-content: center;
         align-items: center;
-        padding: 0 0 60px 0;
         &__img {
             width: 40%;
         }
         &__title {
-            font-size: 30px;
             padding: 0 0 20px 0;
+            font-size: 30px;
         }
         &__para {
-            font-size: 20px;
             padding:0 0 20px 10px;
+            font-size: 20px;
         }
         &__link {
-            font-size: 25px;
             display: block;
-            text-align: center
+            text-align: center;
+            font-size: 25px;
         }
         &__childContainer {
-            height: fit-content;
             margin-left: 30px;
+            height: fit-content;
         }
         &__link {
             text-decoration: none;

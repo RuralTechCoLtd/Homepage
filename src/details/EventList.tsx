@@ -1,6 +1,8 @@
 import React from "react";
-import "./EventList.scss";
+
 import { Link } from "react-router-dom";
+
+import "./EventList.scss";
 
 type Props = {
   to: string;

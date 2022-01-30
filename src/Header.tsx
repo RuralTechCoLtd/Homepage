@@ -1,7 +1,8 @@
-import "./Header.scss";
 import React, { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
 import { makeStyles } from "@material-ui/core/styles";
 import { createTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
@@ -18,6 +19,8 @@ import FaceIcon from "@material-ui/icons/Face";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
 import LinkIcon from "@material-ui/icons/Link";
 import MenuIcon from "@material-ui/icons/Menu";
+
+import "./Header.scss";
 
 const useStyles = makeStyles({
   list: {

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
-import "./Services.scss";
+
 import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
+
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+
+import "./Services.scss";
 
 type Props = {
   title: string;
