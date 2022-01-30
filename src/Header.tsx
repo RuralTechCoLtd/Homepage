@@ -54,10 +54,6 @@ const theme = createTheme({
 type Anchor = "top" | "left" | "bottom" | "right";
 
 const Header: React.FC = () => {
-  function foo(bar: any) {
-    console.log(bar);
-  }
-
   const classes = useStyles();
   const [state, setState] = useState({
     top: false,
