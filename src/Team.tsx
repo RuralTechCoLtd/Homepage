@@ -2,19 +2,12 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { DoubleArrow } from "@mui/icons-material";
+
 import CEOimage from "./images/employee/President.webp";
 import RYOimage from "./images/employee/RyoYamanouchi.webp";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
-import { createTheme } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
 
 import "./Team.scss";
-
-const teamTheme = createTheme({
-  typography: {
-    fontSize: 25,
-  },
-});
 
 const Team: React.FC = () => {
   return (
@@ -87,18 +80,17 @@ const Team: React.FC = () => {
             </div>
           </article>
           <Link to="/Greeting" className="Team__toGreeting">
-            代表挨拶ページへ{" "}
-            <ThemeProvider theme={teamTheme}>
-              <DoubleArrowIcon
-                style={{
-                  marginLeft: "15px",
-                  verticalAlign: "middle",
-                  border: "solid 1px",
-                  borderRadius: "50%",
-                  padding: "15px",
-                }}
-              />
-            </ThemeProvider>
+            代表挨拶ページへ
+            <DoubleArrow
+              sx={{
+                marginLeft: "15px",
+                verticalAlign: "middle",
+                border: "solid 1px",
+                borderRadius: "50%",
+                padding: "15px",
+                fontSize: 50,
+              }}
+            />
           </Link>
         </div>
       </div>
