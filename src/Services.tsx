@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
-import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
+import { DoubleArrow } from "@mui/icons-material";
 
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
 
 import "./Services.scss";
 
@@ -30,13 +30,14 @@ const Templates: React.FC<Temp> = (props: Temp) => {
       <p className="Services__para">{props.para}</p>
       <Link to={props.to} className="Services__andmore">
         And more...
-        <DoubleArrowIcon
-          style={{
+        <DoubleArrow
+          sx={{
             marginLeft: "15px",
             verticalAlign: "middle",
             border: "solid 1px",
             borderRadius: "50%",
             padding: "15px",
+            fontSize: 50,
           }}
         />
       </Link>
