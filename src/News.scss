@@ -36,6 +36,8 @@
 
         &__img {
             width: 100%;
+            height: calc(((1440px * 0.9 - 240px) / 3) * 0.7);
+            object-fit: cover;
         }
     }
 }
@@ -47,6 +49,11 @@
 @media screen and (max-width: 822px) {
     .News {
         &__item {
+            &__img {
+                width: 100%;
+                height: calc(80vw * 0.7);
+                object-fit: cover;
+            }
             width: 80%;
             margin: 10px 5px
         }
