@@ -169,7 +169,7 @@ const Header: React.FC = () => {
               }}
               onClick={toggleDrawer(anchor, true)}
             >
-              <Menu sx={{ color: "#fff", fontSize: 50 }} />
+              <Menu sx={{ color: "#fff", fontSize: 45 }} />
             </Button>
             <Drawer
               anchor={anchor}
