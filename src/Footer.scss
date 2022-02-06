@@ -3,7 +3,7 @@
     background-color: #AAA;
     color: #fff;
     width: 90%;
-    height: 35vh;
+    height: 350px;
     
     &__wrapper {
         display: table;
@@ -32,7 +32,7 @@
     
     &__copyright {
         margin-left: 10px;
-        padding-top:20%;
+        padding-top:15%;
         letter-spacing: 2px;
     }
 }
@@ -40,6 +40,7 @@
 @media screen and (max-width: 960px) {
     .Footer {
         width: 100vw;
+        height: 300px;
         &__logo {
             font-size: 35px;
             padding-left: 0px;
