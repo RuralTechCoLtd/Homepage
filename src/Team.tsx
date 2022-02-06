@@ -53,7 +53,6 @@ const Team: React.FC = () => {
       </svg>
 
       <div className="Team">
-        {/* <img src={TeamImage} className="--team_image" /> */}
         <div className="Team__wrapper">
           <h2 className="Team__title">Team members</h2>
           <article className="Team__odd">
