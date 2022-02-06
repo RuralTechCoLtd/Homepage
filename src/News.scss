@@ -24,14 +24,14 @@
     &__item {
         margin: 15px 15px;
         padding: 15px 15px;
-        border-radius: 20px;
+        border-radius: 3px;
         width: calc((1440px * 0.9 - 240px) / 3);
         text-decoration: none;
         color: #3b3b3b;
         &:hover {
             transition: 0.8s;
-            background-color: #aaa;
-            color: #fff;
+            background-color: #ccc;
+            color: #000;
         }
 
         &__img {
