@@ -30,7 +30,7 @@ const App: React.FC = () => {
         <Header />
         <ScrollToTop />
         <Switch>
-          <Route path="/" exact component={Top} />
+          <Route path="/" component={Top} />
           <Route path="/About/AboutDetails" component={AboutDetails} />
           <Route path="/Services" exact component={Services} />
           <Route path="/Services/EventList" exact component={EventList} />
