@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Homepage/static/css/main.a6de83a4.chunk.css",
-    "main.js": "/Homepage/static/js/main.bb9740c4.chunk.js",
-    "main.js.map": "/Homepage/static/js/main.bb9740c4.chunk.js.map",
+    "main.js": "/Homepage/static/js/main.5b015345.chunk.js",
+    "main.js.map": "/Homepage/static/js/main.5b015345.chunk.js.map",
     "runtime-main.js": "/Homepage/static/js/runtime-main.39886f05.js",
     "runtime-main.js.map": "/Homepage/static/js/runtime-main.39886f05.js.map",
-    "static/js/2.78256433.chunk.js": "/Homepage/static/js/2.78256433.chunk.js",
-    "static/js/2.78256433.chunk.js.map": "/Homepage/static/js/2.78256433.chunk.js.map",
+    "static/js/2.f80f5089.chunk.js": "/Homepage/static/js/2.f80f5089.chunk.js",
+    "static/js/2.f80f5089.chunk.js.map": "/Homepage/static/js/2.f80f5089.chunk.js.map",
     "static/js/3.d06861c3.chunk.js": "/Homepage/static/js/3.d06861c3.chunk.js",
     "static/js/3.d06861c3.chunk.js.map": "/Homepage/static/js/3.d06861c3.chunk.js.map",
     "index.html": "/Homepage/index.html",
     "static/css/main.a6de83a4.chunk.css.map": "/Homepage/static/css/main.a6de83a4.chunk.css.map",
-    "static/js/2.78256433.chunk.js.LICENSE.txt": "/Homepage/static/js/2.78256433.chunk.js.LICENSE.txt",
+    "static/js/2.f80f5089.chunk.js.LICENSE.txt": "/Homepage/static/js/2.f80f5089.chunk.js.LICENSE.txt",
     "static/media/AboutDetails.scss": "/Homepage/static/media/BoyInSnow.54b1dc4e.webp",
     "static/media/MacBookOverDesk.f600a268.webp": "/Homepage/static/media/MacBookOverDesk.f600a268.webp",
     "static/media/MaritimeTerrace.7aad9feb.webp": "/Homepage/static/media/MaritimeTerrace.7aad9feb.webp",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.39886f05.js",
-    "static/js/2.78256433.chunk.js",
+    "static/js/2.f80f5089.chunk.js",
     "static/css/main.a6de83a4.chunk.css",
-    "static/js/main.bb9740c4.chunk.js"
+    "static/js/main.5b015345.chunk.js"
   ]
 }
