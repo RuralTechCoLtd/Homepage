@@ -171,8 +171,6 @@ const Products: React.FC<Props> = (props: Props) => {
 };
 
 const Services: React.FC = () => {
-  // 条件付きレンダリングで画面の一部を変える。
-  // リアクトフックを使用
   const [content, setContent] = useState<string>("");
 
   const setEngineer = () => {

@@ -70,9 +70,6 @@ const Header: React.FC = () => {
       }}
     >
       <Box
-        // className={clsx(classes.list, {
-        //   [classes.fullList]: anchor === "top" || anchor === "bottom",
-        // })}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
@@ -123,78 +120,12 @@ const Header: React.FC = () => {
             </DesignedListItemIcon>
             <ListItemText primary={navlist[1]} />
           </ListItem>
-          {/* <NavLink
-            to="/#Services"
-            isActive={() => {
-              return window.location.hash === "#Services";
-            }}
-          >
-            <ListItem>
-              <DesignedListItemIcon>
-                <AppsIcon />
-              </DesignedListItemIcon>
-              <ListItemText primary={navlist[1]} />
-            </ListItem>
-          </NavLink> */}
-          {/* <ListItem
-            button
-            key={navlist[1]}
-            component={() => {
-              return NavLink({
-                to: "/#Services",
-                isActive: () => {
-                  return window.location.hash === "#Services";
-                },
-              });
-            }}
-          >
-            <DesignedListItemIcon>
-              <AppsIcon />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[1]} />
-          </ListItem> */}
-          {/* // kesitemoiiyo */}
-          {/* <NavLink
-            to="/#Services"
-            isActive={() => {
-              return window.location.hash === "#Services";
-            }}
-          > */}
           <ListItem component={HashLink} to="/#Services">
             <DesignedListItemIcon>
               <Apps />
             </DesignedListItemIcon>
-            <ListItemText
-              primary={navlist[2]}
-              // onClick={() => {
-              //   foo(NavLink);
-              // }}
-            />
+            <ListItemText primary={navlist[2]} />
           </ListItem>
-          {/* </NavLink>
-          // kesitemoiiyo */}
-          {/* <ListItem
-            button
-            key={navlist[1]}
-            component={() => {
-              return NavLink({
-                to: "/#Services",
-                isActive: () => {
-                  return window.location.hash === "#Services";
-                },
-              });
-            }}
-          >
-            <DesignedListItemIcon>
-              <AppsIcon />
-            </DesignedListItemIcon>
-            <ListItemText
-              primary={navlist[1]}
-              onClick={() => {
-                foo(NavLink);
-              }}
-            />
-          </ListItem> */}
           <ListItem button key={navlist[3]} component={NavLink} to="/Greeting">
             <DesignedListItemIcon>
               <Face />
