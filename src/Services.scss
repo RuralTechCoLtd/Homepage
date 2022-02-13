@@ -117,12 +117,12 @@
 @media screen and (max-width: 960px) {
     .Services {
         width: 100vw;
-        &::before {
-            display: block;
-            height: 80px;
-            width: 100vw;
-            content: "";
-        }
+        // &::before {
+        //     display: block;
+        //     height: 80px;
+        //     width: 100vw;
+        //     content: "";
+        // }
         &__container {
             flex-direction: column;
             justify-content: center;

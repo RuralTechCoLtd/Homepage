@@ -18,7 +18,9 @@ type Props = {
 const NewsArticle: React.FC<Props> = (props: Props) => {
   return (
     <Link to={props.to} className="News__item">
-      <img src={props.image} className="News__item__img"></img>
+      <div className="News__item__imgFrame">
+        <img src={props.image} className="News__item__img"></img>
+      </div>
       <h3 className="News__item__date">{props.date}</h3>
       <h2 className="News__item__title">{props.title}</h2>
       <p className="News__item__para">{props.article}</p>
