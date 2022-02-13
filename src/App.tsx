@@ -30,8 +30,8 @@ const App: React.FC = () => {
         <Header />
         <ScrollToTop />
         <Switch>
-          <Route path="/" component={Top} />
-          <Route path="/About/AboutDetails" component={AboutDetails} />
+          <Route path="/Homepage" component={Top} />
+          <Route path="/Homepage/AboutDetails" exact component={AboutDetails} />
           <Route path="/Services" exact component={Services} />
           <Route path="/Services/EventList" exact component={EventList} />
           <Route
