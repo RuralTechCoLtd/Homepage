@@ -26,14 +26,14 @@ const App: React.FC = () => {
   });
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <ScrollToTop />
         <Switch>
-          <Route path="/Homepage" component={Top} />
-          <Route path="/Homepage/AboutDetails" exact component={AboutDetails} />
-          <Route path="/Services" exact component={Services} />
-          <Route path="/Services/EventList" exact component={EventList} />
+          <Route path="/" exact component={Top} />
+          <Route path="/AboutDetails" component={AboutDetails} />
+          <Route path="/Services" component={Services} />
+          <Route path="/Services/EventList" component={EventList} />
           <Route
             path="/Services/EventList/EventDetails"
             component={EventDetails}
