@@ -54,7 +54,9 @@ const Team: React.FC = () => {
 
       <div className="Team">
         <div className="Team__wrapper">
-          <h2 className="Team__title">Team members</h2>
+          <h2 className="Team__title" id="Team">
+            Team members
+          </h2>
           <article className="Team__odd">
             <img src={CEOimage} className="Team__img" />
             <div className="Team__container">

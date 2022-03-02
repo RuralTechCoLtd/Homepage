@@ -35,7 +35,7 @@ const EventDetails: React.FC = () => {
   return (
     <div className="EventDetails">
       <div className="EventDetails__container">
-        <Link to="/Services/EventList" className="EventDetails__back">
+        <Link to="/EventList" className="EventDetails__back">
           EventList
         </Link>
         <EventDetailsArticle

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "./Product.scss";
 
@@ -8,9 +9,9 @@ const EntrustedDevelopment: React.FC = () => {
   return (
     <div className="CommonDetails">
       <div className="CommonDetails__container">
-        <Link to="/" className="CommonDetails__back">
+        <HashLink to="/#Services" className="CommonDetails__back">
           Services
-        </Link>
+        </HashLink>
         <h2 className="CommonDetails__title">受託開発</h2>
         <p className="CommonDetails__sub">- EntrustedDevelopment -</p>
         <p className="CommonDetails__para">

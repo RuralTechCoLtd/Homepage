@@ -29,7 +29,7 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
 };
 const News: React.FC = () => {
   return (
-    <div className="News">
+    <div className="News" id="News">
       <h2 className="News__title">News</h2>
       <Link to="/News/Archive" className="News__toArchive">
         Archive &gt;&gt;

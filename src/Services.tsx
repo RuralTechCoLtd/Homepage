@@ -55,7 +55,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-生産管理アプリケーション-"
         para="工程の見える化と柔軟な管理を実現、従来のスプレッドシートでは管理が難しい業務も自動化し、
      管理業務の時間短縮を実現。人員リソースをより有効的に活用できます。"
-        to="/Services/Assist"
+        to="/Assist"
       ></Templates>
     );
   } else if (props.title === "engineer") {
@@ -67,7 +67,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Entrusted development-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##"
-        to="/Services/EntrustedDevelopment"
+        to="/EntrustedDevelopment"
       ></Templates>
     );
   } else if (props.title === "package") {
@@ -79,7 +79,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Package applications-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="/Services/PackagedApplication"
+        to="/PackagedApplication"
       ></Templates>
     );
   } else if (props.title === "homepage") {
@@ -139,7 +139,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="2021年○月○日午前10時 オンライン開催"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="/Services/EventList/EventDetails"
+        to="/EventList/EventDetails"
       ></Templates>
     );
   } else if (props.title === "kids") {
@@ -228,7 +228,7 @@ const Services: React.FC = () => {
           </ul>
           <ul className="Services__navlist">
             <li>
-              <Link className="Services__navlist__link" to="Services/EventList">
+              <Link className="Services__navlist__link" to="/EventList">
                 イベント予定(一覧)
               </Link>
             </li>
