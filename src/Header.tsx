@@ -112,8 +112,8 @@ const Header: React.FC = () => {
           <ListItem
             button
             key={navlist[1]}
-            component={NavLink}
-            to="/About/AboutDetails"
+            component={HashLink}
+            to="/AboutDetails"
           >
             <DesignedListItemIcon>
               <Work />
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
             </DesignedListItemIcon>
             <ListItemText primary={navlist[2]} />
           </ListItem>
-          <ListItem button key={navlist[3]} component={NavLink} to="/Greeting">
+          <ListItem button key={navlist[3]} component={HashLink} to="/Greeting">
             <DesignedListItemIcon>
               <Face />
             </DesignedListItemIcon>
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
           <ListItem
             button
             key={navlist[4]}
-            component={NavLink}
+            component={HashLink}
             to="/News/Archive"
           >
             <DesignedListItemIcon>

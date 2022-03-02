@@ -28,7 +28,7 @@ const About: React.FC = () => {
             <br />
             お客さまのニーズに寄り添う業務アプリケーションも 作成します。
           </p>
-          <Link className="About__link" to="/About/AboutDetails">
+          <Link className="About__link" to="/AboutDetails">
             About Us
             <DoubleArrow
               sx={{

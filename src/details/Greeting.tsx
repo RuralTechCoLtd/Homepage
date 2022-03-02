@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "./Greeting.scss";
 
@@ -8,9 +9,9 @@ const Greeting: React.FC = () => {
   return (
     <div className="Greeting">
       <div className="Greeting__container">
-        <Link to="/" className="Greeting__back">
+        <HashLink to="/#Team" className="Greeting__back">
           Team Members
-        </Link>
+        </HashLink>
         <div className="Greeting__childContainer">
           <div className="Greeting__grandChildContainer">
             <h2 className="Greeting__RuralTech">Rural Tech</h2>

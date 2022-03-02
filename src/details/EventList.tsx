@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "./EventList.scss";
 
@@ -28,12 +29,12 @@ const EventListArticle: React.FC<Props> = (props: Props) => {
 const EventList: React.FC = () => {
   return (
     <div className="EventList">
-      <Link className="EventList__back" to="/">
+      <HashLink className="EventList__back" to="/#Services">
         Services
-      </Link>
+      </HashLink>
       <h2 className="EventList__title">イベント一覧</h2>
       <EventListArticle
-        to="/Services/EventList/EventDetails"
+        to="/EventList/EventDetails"
         image="https://placehold.jp/160x160.png"
         heading="社会人向けICTセミナー"
         date="2021年○月○日"
