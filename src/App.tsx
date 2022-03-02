@@ -26,30 +26,24 @@ const App: React.FC = () => {
   });
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <ScrollToTop />
         <Switch>
-          <Route path="/" component={Top} />
-          <Route path="/About/AboutDetails" component={AboutDetails} />
-          <Route path="/Services" exact component={Services} />
-          <Route path="/Services/EventList" exact component={EventList} />
-          <Route
-            path="/Services/EventList/EventDetails"
-            component={EventDetails}
-          />
+          <Route path="/" exact component={Top} />
+          <Route path="/AboutDetails" component={AboutDetails} />
+          {/* <Route path="/Services" component={Services} /> */}
+          <Route path="/EventList" exact component={EventList} />
+          <Route path="/EventList/EventDetails" component={EventDetails} />
           <Route path="/News/Archive" component={NewsArchive} />
           <Route path="/News/Details" component={NewsDetails} />
           <Route path="/Greeting" component={Greeting} />
-          <Route path="/Services/Assist" component={AssistDetails} />
+          <Route path="/Assist" component={AssistDetails} />
           <Route
-            path="/Services/EntrustedDevelopment"
+            path="/EntrustedDevelopment"
             component={EntrustedDevelopment}
           />
-          <Route
-            path="/Services/PackagedApplication"
-            component={PackagedApplication}
-          />
+          <Route path="/PackagedApplication" component={PackagedApplication} />
         </Switch>
         <Footer />
       </Router>
