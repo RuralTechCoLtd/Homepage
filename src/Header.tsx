@@ -97,7 +97,6 @@ const Header: React.FC = () => {
               sx={{
                 width: "80vw",
                 maxWidth: "300px",
-                backgroundColor: "#aaa",
                 color: "white",
                 "& .MuiListItemText-root": {
                   color: "white",
