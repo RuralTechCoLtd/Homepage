@@ -207,19 +207,54 @@ const Services: React.FC = () => {
   return (
     <div className="Services" id="Services">
       <h2 className="Services__title">Services</h2>
+      <div className="Services__chip">
+        <span className="Services__chip__red" onClick={setEngineer}>
+          受託開発
+        </span>
+        <span className="Services__chip__red" onClick={setPackage}>
+          パッケージアプリケーション開発
+        </span>
+        <span className="Services__chip__red" onClick={setAssist}>
+          Assist
+        </span>
+        <span className="Services__chip__blue" onClick={setHomepage}>
+          ホームページ制作
+        </span>
+        <span className="Services__chip__blue" onClick={setGit}>
+          Git
+        </span>
+        <span className="Services__chip__blue" onClick={setHosting}>
+          ホスティング
+        </span>
+        <span className="Services__chip__blue" onClick={setJavaScript}>
+          JavaScript
+        </span>
+        <Link className="Services__chip__purple" to="/EventList">
+          イベント予定(一覧)
+        </Link>{" "}
+        <span className="Services__chip__purple" onClick={setWorker}>
+          社会人向けICTセミナー
+        </span>
+        <span className="Services__chip__purple" onClick={setKids}>
+          キッズプログラミング教室
+        </span>
+      </div>
+
       <div className="Services__container">
         <div className="Services__childContainer">
           <ul className="Services__navlist">
-            <li>クラウドアプリケーション開発</li>
-            <ul>
+            <li className="Services__navlist__cloudApp">
+              クラウドアプリケーション開発
+            </li>
+            <ul className="Services__navlist__item">
               <li onClick={setEngineer}>受託開発</li>
               <li onClick={setPackage}>パッケージアプリケーション開発</li>
               <li onClick={setAssist}>Assist</li>
             </ul>
           </ul>
           <ul className="Services__navlist">
-            <li>ICTセミナー</li>
-            <ul>
+            <li className="Services__navlist__ICT">ICTセミナー</li>
+            <ul className="Services__navlist__item">
               <li onClick={setHomepage}>ホームページ制作</li>
               <li onClick={setGit}>Git</li>
               <li onClick={setHosting}>ホスティング</li>
@@ -227,12 +262,12 @@ const Services: React.FC = () => {
             </ul>
           </ul>
           <ul className="Services__navlist">
-            <li>
+            <li className="Services__navlist__item">
               <Link className="Services__navlist__link" to="/EventList">
                 イベント予定(一覧)
               </Link>
             </li>
-            <ul>
+            <ul className="Services__navlist__item">
               <li onClick={setWorker}>社会人向けICTセミナー</li>
               <li onClick={setKids}>
                 ICT人材育成 <br />
