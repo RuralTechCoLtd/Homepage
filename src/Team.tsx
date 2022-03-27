@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import Wave from "react-wavify";
+
 import { DoubleArrow } from "@mui/icons-material";
 
 import CEOimage from "./images/employee/President.webp";
@@ -12,7 +14,42 @@ import "./Team.scss";
 const Team: React.FC = () => {
   return (
     <>
-      <div className="Team__top"></div>
+      <div className="Team__top">
+        <Wave
+          className="Team__top__1"
+          fill="#ffe1b1"
+          opacity="0.719"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.25,
+            points: 5,
+          }}
+        />
+        <Wave
+          className="Team__top__2"
+          fill="#ffe1b1"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.1,
+            points: 4,
+          }}
+        />
+        <Wave
+          className="Team__top__3"
+          fill="#faeded"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.15,
+            points: 3,
+          }}
+        />
+      </div>
       <svg
         className="Team__top__svg"
         xmlns="http://www.w3.org/2000/svg"
@@ -94,6 +131,42 @@ const Team: React.FC = () => {
             />
           </Link>
         </div>
+      </div>
+      <div className="Team__bottom__waves">
+        <Wave
+          className="Team__bottom__1"
+          fill="#ffe1b1"
+          opacity="0.719"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.25,
+            points: 5,
+          }}
+        />
+        <Wave
+          className="Team__bottom__2"
+          fill="#ffe1b1"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.1,
+            points: 4,
+          }}
+        />
+        <Wave
+          className="Team__bottom__3"
+          fill="#faeded"
+          paused={false}
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.15,
+            points: 3,
+          }}
+        />
       </div>
       <svg
         className="Team__bottom"
