@@ -1,4 +1,5 @@
 .Services {
+    opacity: 0;
     width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__title {
@@ -114,6 +115,10 @@
         }
     }
 }
+.visibleServices {
+    transition: 2s;
+    opacity: 100;
+} 
 @media screen and (max-width: 960px) {
     .Services {
         width: 100vw;

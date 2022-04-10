@@ -1,4 +1,5 @@
 .About {
+    opacity: 0;
     width: 90%;
     // height: 100vh;
     // background-color: aqua;
@@ -72,6 +73,10 @@
         color:#aaa;
         // background-color: rebeccapurple;
     }
+}
+.visibleAbout {
+    transition: 2s;
+    opacity: 100;
 }
 @media screen and (max-width: 960px) {
     .About {
