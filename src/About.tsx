@@ -15,7 +15,15 @@ const About: React.FC = () => {
   });
 
   return (
-    <div ref={ref} className={inView ? "visibleAbout" : "About"}>
+    <div
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+      className="About"
+    >
       <div className="About__container">
         <p className="About__introduction">introduction</p>
         <p className="About__copy">

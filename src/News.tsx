@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { useInView } from "react-intersection-observer";
+
 import SampleImage1ForNews from "./images/designMaterial/article/MacBookOverDesk.webp";
 import SampleImage2ForNews from "./images/designMaterial/article/MultiplePcOverDesk.webp";
 import SampleImage3ForNews from "./images/designMaterial/article/MaritimeTerrace.webp";
@@ -16,8 +18,21 @@ type Props = {
   to: string;
 };
 const NewsArticle: React.FC<Props> = (props: Props) => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <Link to={props.to} className="News__item">
+    <Link
+      to={props.to}
+      className="News__item"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <div className="News__item__imgFrame">
         <img src={props.image} className="News__item__img"></img>
       </div>
@@ -28,10 +43,34 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
   );
 };
 const News: React.FC = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
+
   return (
     <div className="News" id="News">
-      <h2 className="News__title">News</h2>
-      <Link to="/News/Archive" className="News__toArchive">
+      <h2
+        className="News__title"
+        ref={ref}
+        style={
+          inView
+            ? { opacity: 100, transform: "translateY(0)" }
+            : { opacity: 0, transform: "translateY(30px)" }
+        }
+      >
+        News
+      </h2>
+      <Link
+        to="/News/Archive"
+        className="News__toArchive"
+        ref={ref}
+        style={
+          inView
+            ? { opacity: 100, transform: "translateY(-60px)" }
+            : { opacity: 0, transform: "translateY(30px)" }
+        }
+      >
         Archive &gt;&gt;
       </Link>
       <div className="News__container">

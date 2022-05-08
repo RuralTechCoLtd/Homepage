@@ -1,10 +1,14 @@
 .News {
+    transition-property: opacity transform;
+    transition-duration: 2s;
     width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__title {
         text-align: center;
         font-size: 60px;
         line-height: 4;
+        transition-property: inherit;
+        transition-duration: inherit;
     }
     &__toArchive {
         display: block;
@@ -13,6 +17,8 @@
         transform: translateY(-60px);
         font-size: 30px;
         text-decoration: none;
+        transition-property: inherit;
+        transition-duration: inherit;
     }
     &__container {
         display: flex;

@@ -215,7 +215,12 @@ const Services: React.FC = () => {
   return (
     <div
       ref={ref}
-      className={inView ? "visibleServices" : "Services"}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+      className="Services"
       id="Services"
     >
       <h2 className="Services__title">Services</h2>
