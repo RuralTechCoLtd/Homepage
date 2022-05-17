@@ -38,6 +38,10 @@
                 }
         }
     }
+    &__parentContainer {
+        transition-property: opacity transform;
+        transition-duration: 2s;    
+    }
     &__childContainer {
         display: flex;
         justify-content: space-between;

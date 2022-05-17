@@ -1,13 +1,26 @@
 import React from "react";
 
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import "./Product.scss";
 
 const EntrustedDevelopment: React.FC = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <div className="CommonDetails">
+    <div
+      className="CommonDetails"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <div className="CommonDetails__container">
         <HashLink to="/#Services" className="CommonDetails__back">
           Services

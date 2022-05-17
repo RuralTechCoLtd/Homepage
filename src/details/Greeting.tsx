@@ -3,11 +3,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { useInView } from "react-intersection-observer";
+
 import "./Greeting.scss";
 
 const Greeting: React.FC = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <div className="Greeting">
+    <div
+      className="Greeting"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <div className="Greeting__container">
         <HashLink to="/#Team" className="Greeting__back">
           Team Members

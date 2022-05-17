@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { useInView } from "react-intersection-observer";
+
 import "./EventList.scss";
 
 type Props = {
@@ -14,8 +16,21 @@ type Props = {
 };
 
 const EventListArticle: React.FC<Props> = (props: Props) => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <Link className="EventList__contents" to={props.to}>
+    <Link
+      className="EventList__contents"
+      to={props.to}
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <img className="EventList__image" src={props.image}></img>
       <div className="EventLins__childContainer">
         <h2 className="EventList__heading">{props.heading}</h2>

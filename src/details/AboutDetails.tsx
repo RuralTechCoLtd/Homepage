@@ -1,8 +1,15 @@
 import React from "react";
 
+import { useInView } from "react-intersection-observer";
+
 import "./AboutDetails.scss";
 
 const AboutDetails: React.FC = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
+
   return (
     <div className="AboutDetails" id="AboutUs">
       <div className="AboutDetails__heroImage">
@@ -11,7 +18,15 @@ const AboutDetails: React.FC = () => {
           <h1 className="AboutDetails__title">Rural Tech</h1>
         </div>
       </div>
-      <div className="AboutDetails__article">
+      <div
+        className="AboutDetails__article"
+        ref={ref}
+        style={
+          inView
+            ? { opacity: 100, transform: "translateY(0)" }
+            : { opacity: 0, transform: "translateY(30px)" }
+        }
+      >
         <p className="AboutDetails__parag">
           Rural
           TechはITで地方から日本を元気づけます！先進のテクノロジーを地方から。

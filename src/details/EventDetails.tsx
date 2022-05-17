@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useInView } from "react-intersection-observer";
+
 import { Link } from "react-router-dom";
 
 import "./EventDetails.scss";
@@ -12,8 +14,20 @@ type Props = {
   ableto: string;
 };
 const EventDetailsArticle: React.FC<Props> = (props: Props) => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <React.Fragment>
+    <div
+      className="EventDetails__parentContainer"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <div className="EventDetails__childContainer">
         <h2 className="EventDetails__title">{props.title}</h2>
         <p className="EventDetails__date">{props.date}</p>
@@ -27,7 +41,7 @@ const EventDetailsArticle: React.FC<Props> = (props: Props) => {
       <hr />
       <h2 className="EventDetails__common">こんな事が出来るようになります</h2>
       <p className="EventDetails__commonPara">{props.ableto}</p>
-    </React.Fragment>
+    </div>
   );
 };
 

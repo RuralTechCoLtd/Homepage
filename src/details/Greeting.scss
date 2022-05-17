@@ -2,6 +2,8 @@
     padding-top: 60px;
     width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    transition-property: opacity transform;
+    transition-duration: 2s;    
     &__container {
         margin: 0 auto;
         width: 85%;

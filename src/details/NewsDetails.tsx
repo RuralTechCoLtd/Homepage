@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { useInView } from "react-intersection-observer";
+
 import "./NewsDetails.scss";
 
 type Props = {
@@ -19,8 +21,20 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
 };
 
 const NewsDetails: React.FC = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <div className="NewsDetails">
+    <div
+      className="NewsDetails"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <div className="NewsDetails__container">
         <Link to="/News/Archive" className="NewsDetails__back">
           News Archive
