@@ -5,8 +5,10 @@
   --my-font3: "Noto Sans JP", sans-serif;
   --my-font4: "Sawarabi Gothic", sans-serif;
 }
-// reset css
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
+
+html, body, div, h1, h2, h3, h4, h5, h6,
+p, span, ol, ul, li, img, figure, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }

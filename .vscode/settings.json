@@ -3,5 +3,23 @@
         "source.fixAll.eslint": true
     },
     "eslint.format.enable": true,
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "cSpell.ignoreWords": [
+        "CEOGREETING",
+        "Oimage",
+        "Sawarabi",
+        "Yamanouchi",
+        "ableto",
+        "navlist",
+        "snsicon",
+        "webp"
+    ],
+    "cSpell.words": [
+        "andmore",
+        "clsx",
+        "fontawesome",
+        "fortawesome",
+        "scrolldown",
+        "soucecode"
+    ]
 }

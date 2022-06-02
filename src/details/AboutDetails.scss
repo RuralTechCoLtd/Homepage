@@ -1,0 +1,89 @@
+.AboutDetails {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
+    &__heroImage {
+		height: 100vh;
+		width: 100%;
+		background: url("../images/designMaterial/background/BoyInSnow.webp"); 
+		background-repeat: no-repeat;
+	  	background-position: center center;
+	  	background-size: cover;
+	  	color: white;
+    }
+		&__childContainer {
+			position: relative;
+			top: 80%;
+			left:10%;
+			width: fit-content;
+		}
+		&__sub {
+			width: fit-content;
+			font-size: 25px;
+		}
+		&__title {
+			width: fit-content;
+			font-size: 70px;
+		}
+		&__article {
+			width: 85%;
+			margin: 0 auto;
+		}
+		&__parag {
+			padding:60px 0 80px;
+			margin: 0 auto;
+			width: 90%;
+			line-height: 1.8;
+			font-size: 18px;
+		}
+		&__arts {
+			&__title {
+				text-align: center;
+				line-height: 2em;
+				font-size: 30px;
+			}
+			&__pics {
+				display: flex;
+				flex-direction: row;
+				padding: 80px 0 0;
+				img {
+					display: block;
+					margin: 0 auto;
+					width: 45%;
+				}
+			}
+		}
+}
+@media screen and (max-width: 960px) {
+    .AboutDetails {
+        width: 100vw;
+		&__childContainer {
+			top: 70%
+		}
+		&__heroImage {
+			width: 100%;
+		}
+		&__article {
+			width: 90%;
+		}
+		&__title {
+			font-size: 50px;
+		}
+		&__parag {
+			padding: 40px 0 40px;
+		}
+		&__arts {
+			&__title {
+				line-height: 1.5;
+			}
+			&__pics {
+				flex-direction: column;
+				padding: 40px 0 0;
+				img {
+					padding: 10px 0;
+					width: 100%;
+				}
+			}
+		}
+    }
+}

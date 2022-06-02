@@ -1,43 +1,82 @@
-// commom, large screen (norm width is 1440px)
 .Footer {
     font-family: var(--my-font1), var(--my-font2);
     background-color: #AAA;
     color: #fff;
     width: 90%;
-    height: 60vh;
-    position: relative;
+    height: 350px;
+    
+    &__wrapper {
+        display: table;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+        height: fit-content;
+    }
+    
+    &__logo {
+        white-space: nowrap;
+        line-height: 2;
+        font-size: 60px;
+    }
+    
+    &__snsicon--wrapper {
+        padding-top: 20%;
+        padding-left:20%;
+    }
+    
+    &__snsicon {
+        padding: 0 10px;
+        font-size: 83px;
+    }
+    
+    &__copyright {
+        margin-left: 10px;
+        padding-top:15%;
+        letter-spacing: 2px;
+    }
+}
+    
+@media screen and (max-width: 960px) {
+    .Footer {
+        width: 100vw;
+        height: 300px;
+        &__logo {
+            font-size: 35px;
+            padding-left: 0px;
+        }
+        &__snsicon {
+            font-size: 45px;
+        }
+        &__copyright {
+            margin-top: 20px;
+            padding-left: 0;
+            padding-top: 0px;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .Footer {
+        &__snsicon {
+            font-size: 35px;
+        }
+        &__copyright {
+            margin-left: 5px;
+		}
+    }
 }
 
-.Footer__wrapper {
-    position: absolute;
-    top: 20%;
-    left: 10%;
+@media screen and (max-width: 300px) {
+  .Footer {
+		&__logo {
+			font-size: 30px;
+		}
+		&__snsicon {
+			font-size: 25px;
+		}
+		&__copyright {
+            margin-left: 5px;
+			letter-spacing: 1px;
+		}
+	}    
 }
-
-.Footer__logo {
-    white-space: nowrap;
-    font-size: 65px;
-    padding-top: 10%;
-    padding-left: 5%;
-}
-
-.Footer__snsicon--wrapper {
-    padding-top: 20%;
-    padding-left:20%;
-}
-
-.Footer__snsicon {
-    padding-left: 10px;
-    font-size: 83px;
-}
-
-.Footer__copy {
-    padding-top:20%;
-    padding-left:10%;
-}
-
-// small screen
-@media (min-width: 960px) {
-
-}
-

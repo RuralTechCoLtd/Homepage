@@ -1,0 +1,115 @@
+.Team {
+    width: 90%;
+    font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    background-color: #FAEDED;
+    &__top {
+        width: 90%;
+        height: 100vh;
+        background-image: url("http://placehold.jp/1440x980.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        &__svg {
+            position: absolute;
+            transform: translateY(-99%);
+            width: 90vw;
+        }
+    }
+    &__bottom {
+        width: 90vw;
+    }
+    &__wrapper {
+        margin: 0 auto;
+        width: 80%;
+    }
+    &__title {
+        padding-bottom: 1em;
+        text-align: center;
+        font-size: 60px;
+    }
+    &__img {
+        width: 45%;
+        border-radius: 10px;
+    }
+    &__post {
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+    }
+    &__name {
+        font-size: 30px;
+        line-height: 2;
+        text-align: center;
+    }
+    &__para {
+        font-size: 18px;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        color: #333;
+        width: 50%;
+    }
+    &__odd {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__even {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    &__toGreeting {
+        display: block;
+        position: relative;
+        top: 30px;
+        text-decoration: none;
+        text-align: right;
+        font-size: 20px;
+        color: #666;
+    }
+}
+@media screen and (max-width: 960px) {
+    .Team {
+        width: 100vw;
+        &__img {
+            width: 100%;
+        }
+        &__odd {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+
+        }
+        &__even {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+        &__container {
+            width: 100%;
+        }
+        &__post {
+            line-height: 3;
+        }
+        &__top {
+            width: 100vw;
+            &__svg {
+                width: 100vw;
+            }
+        }
+        &__bottom {
+            width: 100vw;
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    .Team {
+        &__title {
+            font-size: 40px;
+        }
+    }
+}

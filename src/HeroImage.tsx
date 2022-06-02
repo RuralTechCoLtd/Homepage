@@ -1,11 +1,10 @@
 import React from "react";
-import HeroImage1 from "./images/Photos Library.jpg";
+
 import "./HeroImage.scss";
 
 const HeroImage: React.FC = () => {
   return (
-    <div className="HeroContainer">
-      {/* <img src={HeroImage1} alt="heroImage" className="heroContainer__image" /> */}
+    <div className="HeroContainer" id="#">
       <h2 className="HeroContainer__message">
         We will energize Japan from the rural areas.
       </h2>

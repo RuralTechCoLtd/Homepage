@@ -1,10 +1,10 @@
-.NewsArchive {
-    padding-top: 60px;
+.CommonDetails {
     width: 90%;
-    font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
     &__container {
-        width: 80%;
-        margin: 0 auto;
+        width: 70%;
+        margin: 60px auto 0 auto;
     }
     &__back {
         display: block;
@@ -22,10 +22,10 @@
             width: 40px;
             vertical-align: middle;
             background-color: #aaa;
+            transition: 1s;
         }
         &:hover {
             &::before {
-                transition: 1s;
                 content: "Back to";
                 display: inline-block;
                 margin-right: 10px;
@@ -42,67 +42,80 @@
         font-size: 60px;
         line-height: 2;
     }
-    &__item {
+    &__sub {
+        font-size: 20px;
+        line-height: 4;
+    }
+    &__para {
+        padding: 30px 0;
+        font-size: 18px;
+    }
+    &__slide {
         display: flex;
-        padding: 0 0 60px 0;
-        justify-content: center;
-        align-items: center;
-        &__img {
-            width: 40%;
-        }
-        &__title {
-            padding: 0 0 20px 0;
-            font-size: 30px;
-        }
-        &__para {
-            padding:0 0 20px 10px;
-            font-size: 20px;
-        }
-        &__link {
-            display: block;
-            text-align: center;
-            font-size: 25px;
-        }
-        &__childContainer {
-            margin-left: 30px;
-            height: fit-content;
-        }
-        &__link {
-            text-decoration: none;
+        flex-direction: row;
+        padding: 60px 15%;
+        list-style: none;
+        overflow-x: scroll;
+        &__items {
+            display: inline-block;
+            margin: 0 60px 0 0;
+            > p {
+                line-height: 2;
+            }
         }
     }
+
 }
 @media screen and (max-width: 960px) {
-    .NewsArchive {
+    .CommonDetails {
         width: 100vw;
         &::before {
-            content: "";
             display: block;
+            content: "";
             height: 10vh;
             width: 100vw;
-        }
-        &__container {
-            width: 90%;
         }
         &__back {
             right: 0px;
         }
-        &__title {
-            font-size: 50px;
+        &__container {
+            width: 90%;
         }
-
-    }
-}
-@media screen and (max-width: 560px) {
-    .NewsArchive {
         &__title {
             font-size: 40px;
         }
-        &__item {
-            flex-direction: column;
-            &__img {
-                width: 80%;
+        &__sub {
+            line-height: 2;
+        }
+        &__slide {
+            &__items {
+                > img {
+                    width: 60vw;
+                }
             }
         }
+    }
+}
+@media screen and (max-width: 560px) {
+    .CommonDetails {
+        &__back {
+            right: 0px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 1.5;
+        }
+        &__sub {
+            font-size: 15px;
+            line-height: 2;
+        }
+        &__slide {
+            &__items {
+                > img {
+                    width: 80vw;
+                }
+            }
+        }
+
     }
 }
