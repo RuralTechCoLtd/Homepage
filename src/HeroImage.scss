@@ -3,10 +3,11 @@
   height: 100vh;
   width: 90%;
   font-family: var(--my-font1), var(--my-font2);
-  background: url("./images/designMaterial/background/WomanTakingPicture.webp");
+  // background: url("./images/designMaterial/background/WomanTakingPicture.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  
   &__message {
     position: relative;
     top: 30%;
