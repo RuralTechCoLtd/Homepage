@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./HeroImage.scss";
 
@@ -8,12 +8,12 @@ import Looking from "./images/designMaterial/background/LookingAtWaterfront.webp
 
 const images = [WomanTakingPicture, Man1, Looking];
 
-const coordinate = [];
+const coordinate = ["center center", "center center", "center center"];
 
 const HeroImage: React.FC = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setValue((v) => (v === 2 ? 0 : v + 1));
     }, 5000);
@@ -23,7 +23,12 @@ const HeroImage: React.FC = () => {
     <div
       className="HeroContainer"
       id="#"
-      style={{ background: "url(" + images[value] + ")" }}
+      style={{
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        background: "url(" + images[value] + ")",
+        backgroundPosition: coordinate[value],
+      }}
     >
       <h2 className="HeroContainer__message">
         We will energize Japan from the rural areas.
