@@ -1,6 +1,6 @@
-import { PinDropSharp } from "@material-ui/icons";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 import "./EventDetails.scss";
 
@@ -35,7 +35,7 @@ const EventDetails: React.FC = () => {
   return (
     <div className="EventDetails">
       <div className="EventDetails__container">
-        <Link to="/Services/EventList" className="EventDetails__back">
+        <Link to="/EventList" className="EventDetails__back">
           EventList
         </Link>
         <EventDetailsArticle

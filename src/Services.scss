@@ -2,40 +2,37 @@
     width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__title {
-        // background-color: gold;
+        text-align: center;
         font-size: 60px;
         line-height: 2;
-        text-align: center;
     }
     &__image {
         display: block;
-        width: 75%;
         margin: 0 auto;
+        width: 75%;
     }
     &__container {
-        // background-color: greenyellow;
-        width: 95%;
-        margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        width: 95%;
     }
     &__navlist {
-        font-size: 20px;
-        color: #333;
-        list-style: none;
-        white-space: nowrap;
-        // background-color: rgb(118, 205, 255);
         margin:0 auto;
         padding: 10px 0;
+        list-style: none;
+        font-size: 20px;
+        white-space: nowrap;
         line-height: 2;
+        color: #333;
         &__link {
-            text-decoration: none;
-            color: #000;
             display: inline-block;
             width: 100%;
             border-radius: 10px;
+            text-decoration: none;
+            color: #000;
             &:hover {
                 transition: 0.5s;
                 background-color: #aaa;
@@ -44,37 +41,35 @@
         }
 
         & > li::before {
-            width:  8px;               /* 幅指定 */
-            height:  8px;              /* 高さ指定 */
-            display:  inline-block;     /* インラインブロックにする */
-            background-color: #fff;  /* 背景色指定 */
-            border: 1px solid ;
+            display:  inline-block;
             margin-right: 5px;
-            content:  "";     /* 空の要素作成 */
+            border: 1px solid ;
+            width:  8px;
+            height:  8px;
+            background-color: #fff;
+            content:  "";
             }
         & ul > li {
             list-style: none;
             cursor: pointer;
             border-radius: 10px;
             &::before {
-                content:  "";     /* 空の要素作成 */
-                width:  8px;               /* 幅指定 */
-                height:  8px;              /* 高さ指定 */
-                display:  inline-block;     /* インラインブロックにする */
-                background-color: #aaa;  /* 背景色指定 */
+                display:  inline-block;
                 margin: 0 5px 0 10px;
                 vertical-align: middle;
+                width:  8px;
+                height:  8px;
+                content:  "";
+                background-color: #aaa;
             }
             &:hover {
                 transition: 0.5s;
-                // background-color: rgb(202, 250, 250);
                 background-color: #aaa;
                 color:#fff
             }
         }
     }
     &__contents {
-        // background-color: indianred;
         width: 70%;
     }
     &__name {
@@ -90,44 +85,44 @@
         font-size: 18px;
     }
     &__andmore {
-        font-size: 18px;
-        line-height: 8;
         display: block;
         text-align: center;
+        font-size: 18px;
+        line-height: 8;
         text-decoration: none;
         color:#aaa
     }
     &__default {
-        height: fit-content;
-        margin: "auto 0";
         padding: "0 5%";
         width: "60%";
+        border-radius: 10px;
+        height: fit-content;
+        margin: "auto 0";
         font-size: 30px;
         color: #929292;
         border: solid 3px #929292;
-        border-radius: 10px;
         &__mobile {
-            height: fit-content;
+            display: none;
             margin: "auto 0";
             padding: "0 5%";
+            border: solid 3px #929292;
+            border-radius: 10px;    
+            height: fit-content;
             width: "60%";
             font-size: 30px;
             color: #929292;
-            border: solid 3px #929292;
-            border-radius: 10px;    
-            display: none;
         }
     }
 }
 @media screen and (max-width: 960px) {
     .Services {
         width: 100vw;
-        &::before {
-            display: block;
-            height: 80px;
-            width: 100vw;
-            content: "";
-        }
+        // &::before {
+        //     display: block;
+        //     height: 80px;
+        //     width: 100vw;
+        //     content: "";
+        // }
         &__container {
             flex-direction: column;
             justify-content: center;
@@ -141,10 +136,8 @@
         &__navlist {
             width: calc(960px * 0.8 / 3);
             padding: 5% 1em;
-            // background-color: turquoise;
             white-space: pre-wrap;
             text-indent: -1em;
-            // width: 25%;
             line-height: 1.5;
             &__link {
                 text-indent: 0.5em;

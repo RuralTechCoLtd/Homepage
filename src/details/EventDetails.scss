@@ -1,10 +1,10 @@
 .EventDetails {
-    width: 90%;
     padding-top: 60px;
+    width: 90%;
     font-family: var(--my-font1), var(--my-font2), var(--my-font3), var(--my-font4);
     &__container {
-        width: 80%;
         margin: 0 auto;
+        width: 80%;
     }
     &__back {
         display: block;
@@ -16,10 +16,10 @@
         &::before {
             content: "";
             display: inline-block;
-            height: 2px;
-            width: 40px;
             margin-right: 10px;
             border-radius: 10px;
+            height: 2px;
+            width: 40px;
             vertical-align: middle;
             background-color: #aaa;
         }
@@ -28,10 +28,10 @@
                 transition: 1s;
                 content: "Back to";
                 display: inline-block;
-                width: fit-content;
-                height: fit-content;
                 margin-right: 10px;
                 border-radius: 10px;
+                width: fit-content;
+                height: fit-content;
                 vertical-align: 2px;
                 background-color: #aaa;
                 color:#fff;
@@ -57,9 +57,9 @@
         line-height: 3;
     }
     &__commonPara {
+        padding-bottom: 30px;
         color: #444;
         font-size: 18px;
-        padding-bottom: 30px;
     }
 }
 @media screen and (max-width: 960px) {
@@ -75,14 +75,14 @@
             flex-direction: column;
         }
         &__title {
+            padding: 15px 0;
             font-size: 30px;
             line-height: 1.5;
-            padding: 15px 0;
         }
         &__common {
+            padding: 15px 0;
             font-size: 25px;
             line-height: 1.5;
-            padding: 15px 0;
         }
     }
 }

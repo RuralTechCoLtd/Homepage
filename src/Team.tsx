@@ -1,19 +1,13 @@
 import React from "react";
-import TeamImage from "./images/team_image.jpg";
-import { Link } from "react-router-dom";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
-import CEOimage from "./images/CEOimage.jpg";
-import RYOimage from "./images/RYOimage.jpg";
-import "./Team.scss";
-import { createTheme } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
-import { pink } from "@material-ui/core/colors";
 
-const teamTheme = createTheme({
-  typography: {
-    fontSize: 25,
-  },
-});
+import { Link } from "react-router-dom";
+
+import { DoubleArrow } from "@mui/icons-material";
+
+import CEOimage from "./images/employee/President.webp";
+import RYOimage from "./images/employee/RyoYamanouchi.webp";
+
+import "./Team.scss";
 
 const Team: React.FC = () => {
   return (
@@ -52,16 +46,17 @@ const Team: React.FC = () => {
               transform="translate(0 4730.405)"
               fill="#faeded"
               stroke="#faeded"
-              stroke-width="1"
+              strokeWidth="1"
             />
           </g>
         </g>
       </svg>
 
       <div className="Team">
-        {/* <img src={TeamImage} className="--team_image" /> */}
         <div className="Team__wrapper">
-          <h2 className="Team__title">Team members</h2>
+          <h2 className="Team__title" id="Team">
+            Team members
+          </h2>
           <article className="Team__odd">
             <img src={CEOimage} className="Team__img" />
             <div className="Team__container">
@@ -86,18 +81,17 @@ const Team: React.FC = () => {
             </div>
           </article>
           <Link to="/Greeting" className="Team__toGreeting">
-            代表挨拶ページへ{" "}
-            <ThemeProvider theme={teamTheme}>
-              <DoubleArrowIcon
-                style={{
-                  marginLeft: "15px",
-                  verticalAlign: "middle",
-                  border: "solid 1px",
-                  borderRadius: "50%",
-                  padding: "15px",
-                }}
-              />
-            </ThemeProvider>
+            代表挨拶ページへ
+            <DoubleArrow
+              sx={{
+                marginLeft: "15px",
+                verticalAlign: "middle",
+                border: "solid 1px",
+                borderRadius: "50%",
+                padding: "15px",
+                fontSize: 50,
+              }}
+            />
           </Link>
         </div>
       </div>
@@ -133,7 +127,7 @@ const Team: React.FC = () => {
             transform="translate(0 4730.405)"
             fill="#faeded"
             stroke="#faeded"
-            stroke-width="1"
+            strokeWidth="1"
           />
         </g>
       </svg>

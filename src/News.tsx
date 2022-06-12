@@ -1,10 +1,12 @@
 import React from "react";
-import "./News.scss";
+
 import { Link } from "react-router-dom";
 
-import SampleImage1ForNews from "./images/brandon-atchison-p5_7nAgi-rw-unsplash.jpg";
-import SampleImage2ForNews from "./images/marvin-meyer-SYTO3xs06fU-unsplash.jpg";
-import SampleImage3ForNews from "./images/hawaiiGOPR0045_TP_V.jpg";
+import SampleImage1ForNews from "./images/designMaterial/article/MacBookOverDesk.webp";
+import SampleImage2ForNews from "./images/designMaterial/article/MultiplePcOverDesk.webp";
+import SampleImage3ForNews from "./images/designMaterial/article/MaritimeTerrace.webp";
+
+import "./News.scss";
 
 type Props = {
   image: string;
@@ -16,7 +18,9 @@ type Props = {
 const NewsArticle: React.FC<Props> = (props: Props) => {
   return (
     <Link to={props.to} className="News__item">
-      <img src={props.image} className="News__item__img"></img>
+      <div className="News__item__imgFrame">
+        <img src={props.image} className="News__item__img"></img>
+      </div>
       <h3 className="News__item__date">{props.date}</h3>
       <h2 className="News__item__title">{props.title}</h2>
       <p className="News__item__para">{props.article}</p>
@@ -25,7 +29,7 @@ const NewsArticle: React.FC<Props> = (props: Props) => {
 };
 const News: React.FC = () => {
   return (
-    <div className="News">
+    <div className="News" id="News">
       <h2 className="News__title">News</h2>
       <Link to="/News/Archive" className="News__toArchive">
         Archive &gt;&gt;

@@ -1,64 +1,39 @@
-import "./Header.scss";
 import React, { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { makeStyles } from "@material-ui/core/styles";
-import { createTheme } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import AssistantPhotoIcon from "@material-ui/icons/AssistantPhoto";
-import WorkIcon from "@material-ui/icons/Work";
-import AppsIcon from "@material-ui/icons/Apps";
-import FaceIcon from "@material-ui/icons/Face";
-import AnnouncementIcon from "@material-ui/icons/Announcement";
-import LinkIcon from "@material-ui/icons/Link";
-import MenuIcon from "@material-ui/icons/Menu";
 
-const useStyles = makeStyles({
-  list: {
-    width: "80vw",
-    maxWidth: "300px",
-    backgroundColor: "#aaa",
-    color: "white",
-    "& .MuiListItemText-root": {
-      color: "white",
-      textDecoration: "none",
-    },
-    "& .MuiListItemText-root span": {
-      textDecoration: "none",
-    },
-  },
-  root: {
-    height: "100vh",
-    backgroundColor: "#aaa",
-    position: "relative",
-  },
-  text: {
-    color: "white",
-    textDecoration: "none",
-    fontSize: "large",
-  },
-});
+import {
+  Box,
+  Button,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  styled,
+} from "@mui/material";
+import {
+  Announcement,
+  Apps,
+  AssistantPhoto,
+  Face,
+  Link,
+  Menu,
+  Work,
+} from "@mui/icons-material";
 
-const theme = createTheme({
-  typography: {
-    fontSize: 25,
-  },
-});
+import "./Header.scss";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
-const Header: React.FC = () => {
-  function foo(bar: any) {
-    console.log(bar);
-  }
+const DesignedListItemIcon = styled(ListItemIcon)(() => ({
+  color: "white",
+  textDecoration: "none",
+  fontSize: "large",
+}));
 
-  const classes = useStyles();
+const Header: React.FC = () => {
   const [state, setState] = useState({
     top: false,
     left: false,
@@ -87,132 +62,95 @@ const Header: React.FC = () => {
       setState({ ...state, [anchor]: open });
     };
   const list = (anchor: Anchor) => (
-    <div className={classes.root}>
-      <div
-        className={classes.list}
-        // className={clsx(classes.list, {
-        //   [classes.fullList]: anchor === "top" || anchor === "bottom",
-        // })}
+    <Box
+      sx={{
+        height: "100vh",
+        backgroundColor: "#aaa",
+        position: "relative",
+      }}
+    >
+      <Box
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
+        sx={{
+          width: "80vw",
+          maxWidth: "300px",
+          backgroundColor: "#aaa",
+          color: "white",
+          "& .MuiListItemText-root": {
+            color: "white",
+            textDecoration: "none",
+          },
+          "& .MuiListItemText-root span": {
+            textDecoration: "none",
+          },
+        }}
       >
         <List>
           <ListItem button key={navlist[0]} component={HashLink} to="/#">
-            <ListItemIcon className={classes.text}>
-              <AssistantPhotoIcon />
-            </ListItemIcon>
-            <ListItemText primary={navlist[0]} className={classes.text} />
+            <DesignedListItemIcon>
+              <AssistantPhoto />
+            </DesignedListItemIcon>
+            <ListItemText
+              primary={navlist[0]}
+              sx={{
+                width: "80vw",
+                maxWidth: "300px",
+                color: "white",
+                "& .MuiListItemText-root": {
+                  color: "white",
+                  textDecoration: "none",
+                },
+                "& .MuiListItemText-root span": {
+                  textDecoration: "none",
+                },
+              }}
+            />
           </ListItem>
           <ListItem
             button
             key={navlist[1]}
-            component={NavLink}
-            to="/About/AboutDetails"
+            component={HashLink}
+            to="/AboutDetails"
           >
-            <ListItemIcon className={classes.text}>
-              <WorkIcon />
-            </ListItemIcon>
+            <DesignedListItemIcon>
+              <Work />
+            </DesignedListItemIcon>
             <ListItemText primary={navlist[1]} />
           </ListItem>
-          {/* <NavLink
-            to="/#Services"
-            isActive={() => {
-              return window.location.hash === "#Services";
-            }}
-          >
-            <ListItem>
-              <ListItemIcon className={classes.text}>
-                <AppsIcon />
-              </ListItemIcon>
-              <ListItemText primary={navlist[1]} />
-            </ListItem>
-          </NavLink> */}
-          {/* <ListItem
-            button
-            key={navlist[1]}
-            component={() => {
-              return NavLink({
-                to: "/#Services",
-                isActive: () => {
-                  return window.location.hash === "#Services";
-                },
-              });
-            }}
-          >
-            <ListItemIcon className={classes.text}>
-              <AppsIcon />
-            </ListItemIcon>
-            <ListItemText primary={navlist[1]} />
-          </ListItem> */}
-          {/* // kesitemoiiyo */}
-          {/* <NavLink
-            to="/#Services"
-            isActive={() => {
-              return window.location.hash === "#Services";
-            }}
-          > */}
           <ListItem component={HashLink} to="/#Services">
-            <ListItemIcon className={classes.text}>
-              <AppsIcon />
-            </ListItemIcon>
-            <ListItemText
-              primary={navlist[2]}
-              // onClick={() => {
-              //   foo(NavLink);
-              // }}
-            />
+            <DesignedListItemIcon>
+              <Apps />
+            </DesignedListItemIcon>
+            <ListItemText primary={navlist[2]} />
           </ListItem>
-          {/* </NavLink>
-          // kesitemoiiyo */}
-          {/* <ListItem
-            button
-            key={navlist[1]}
-            component={() => {
-              return NavLink({
-                to: "/#Services",
-                isActive: () => {
-                  return window.location.hash === "#Services";
-                },
-              });
-            }}
-          >
-            <ListItemIcon className={classes.text}>
-              <AppsIcon />
-            </ListItemIcon>
-            <ListItemText
-              primary={navlist[1]}
-              onClick={() => {
-                foo(NavLink);
-              }}
-            />
-          </ListItem> */}
-          <ListItem button key={navlist[3]} component={NavLink} to="/Greeting">
-            <ListItemIcon className={classes.text}>
-              <FaceIcon />
-            </ListItemIcon>
+          <ListItem button key={navlist[3]} component={HashLink} to="/Greeting">
+            <DesignedListItemIcon>
+              <Face />
+            </DesignedListItemIcon>
             <ListItemText primary={navlist[3]} />
           </ListItem>
           <ListItem
             button
             key={navlist[4]}
-            component={NavLink}
+            component={HashLink}
             to="/News/Archive"
           >
-            <ListItemIcon className={classes.text}>
-              <AnnouncementIcon />
-            </ListItemIcon>
+            <DesignedListItemIcon>
+              <Announcement />
+            </DesignedListItemIcon>
             <ListItemText primary={navlist[4]} />
           </ListItem>
           <ListItem button key={navlist[5]} component={HashLink} to="/#Footer">
-            <ListItemIcon className={classes.text}>
-              <LinkIcon />
-            </ListItemIcon>
+            <DesignedListItemIcon>
+              <Link />
+            </DesignedListItemIcon>
             <ListItemText primary={navlist[5]} />
           </ListItem>
         </List>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 
   return (
@@ -230,9 +168,7 @@ const Header: React.FC = () => {
               }}
               onClick={toggleDrawer(anchor, true)}
             >
-              <ThemeProvider theme={theme}>
-                <MenuIcon style={{ color: "#fff" }} />
-              </ThemeProvider>
+              <Menu sx={{ color: "#fff", fontSize: 45 }} />
             </Button>
             <Drawer
               anchor={anchor}

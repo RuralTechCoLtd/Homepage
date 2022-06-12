@@ -1,13 +1,17 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import "./Product.scss";
+
 const PackagedApplication: React.FC = () => {
   return (
     <div className="CommonDetails">
       <div className="CommonDetails__container">
-        <Link to="/" className="CommonDetails__back">
+        <HashLink to="/#Services" className="CommonDetails__back">
           Services
-        </Link>
+        </HashLink>
         <h2 className="CommonDetails__title">パッケージアプリケーション開発</h2>
         <p className="CommonDetails__sub">- Packaged Application -</p>
         <p className="CommonDetails__para">

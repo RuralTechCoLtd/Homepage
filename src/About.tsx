@@ -1,6 +1,9 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+
+import { DoubleArrow } from "@mui/icons-material";
+
 import "./About.scss";
 
 const About: React.FC = () => {
@@ -25,15 +28,16 @@ const About: React.FC = () => {
             <br />
             お客さまのニーズに寄り添う業務アプリケーションも 作成します。
           </p>
-          <Link className="About__link" to="/About/AboutDetails">
+          <Link className="About__link" to="/AboutDetails">
             About Us
-            <DoubleArrowIcon
-              style={{
+            <DoubleArrow
+              sx={{
                 marginLeft: "15px",
                 verticalAlign: "middle",
                 border: "solid 1px",
                 borderRadius: "50%",
                 padding: "15px",
+                fontSize: 50,
               }}
             />
           </Link>

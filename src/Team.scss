@@ -11,21 +11,21 @@
         background-size: cover;
         &__svg {
             position: absolute;
-            width: 90vw;
             transform: translateY(-99%);
+            width: 90vw;
         }
     }
     &__bottom {
         width: 90vw;
     }
     &__wrapper {
-        width: 80%;
         margin: 0 auto;
+        width: 80%;
     }
     &__title {
-        font-size: 60px;
-        text-align: center;
         padding-bottom: 1em;
+        text-align: center;
+        font-size: 60px;
     }
     &__img {
         width: 45%;
@@ -45,11 +45,11 @@
         font-size: 18px;
     }
     &__container {
-        color: #333;
-        width: 50%;
         display: flex;
         flex-direction: column;
         align-self: center;
+        color: #333;
+        width: 50%;
     }
     &__odd {
         display: flex;
@@ -61,14 +61,13 @@
         justify-content: space-between;
     }
     &__toGreeting {
-        text-decoration: none;
         display: block;
+        position: relative;
+        top: 30px;
+        text-decoration: none;
         text-align: right;
         font-size: 20px;
         color: #666;
-        position: relative;
-        top: 30px
-        // background-color: royalblue;
     }
 }
 @media screen and (max-width: 960px) {

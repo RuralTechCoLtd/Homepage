@@ -1,28 +1,27 @@
 .About {
     width: 90%;
-    height: 100vh;
-    // background-color: yellowgreen;
+    // height: 100vh;
+    // background-color: aqua;
+    font-family: var(--my-font1), var(--my-font2), 
+    var(--my-font3), var(--my-font4);
     &__container {
-        margin: 0 auto;
-        font-family: var(--my-font1), var(--my-font2), 
-        var(--my-font3), var(--my-font4);
-        height: 70%;
-        width: 95%;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
         display: flex;
         flex-direction: row;
+        // position: relative;
+        // top: 50%;
+        // transform: translateY(-50%);
         justify-content: center;
-        // background-color: purple;
+        margin: 100px 0 60px;
+        // height: 70%;
+        width: 95%;
     }
     &__introduction {
+        // position: relative;
+        // top: 40%;
+        // transform: translateY(-5%);
         white-space: nowrap;
         height: 40px;
         width: fit-content;
-        position: relative;
-        top: 40%;
-        transform: translateY(-5%);
         &::before {
             content: "";
             display: inline-block;
@@ -35,90 +34,84 @@
         }
     }
     &__copy {
-        font-weight: bold;
-        writing-mode: vertical-lr;
-        position: relative;
-        top:40%;
-        transform: translateY(-5%);
-        height: 280px;
-        width: fit-content;
+        // position: relative;
+        // top:40%;
+        // transform: translateY(-5%);
+        // height: 280px;
+        // width: fit-content;
         margin: 0 5%;
         font-size: 20px;
+        font-weight: bold;
+        writing-mode: vertical-lr;
         line-height: 2;
         letter-spacing: 10px;
     }
     &__title {
-        display: table;
-        // background-color: greenyellow;
+        // display: table;
+        // position: relative;
+        // top: 20%;
         font-size: 60px;
-        position: relative;
-        top: 20%;
+        // background-color: darkorange;
     }
     &__article {
-        display: table;
-        // background-color: greenyellow;
+        // display: table;
+        // position: relative;
+        // top:30%;
         font-size: 18px;
-        position: relative;
-        top:30%;
     }
     &__link {
-        // TODO リンクのエージェントスタイルの無効、編集。
-        display: table;
-        // background-color: greenyellow;
+        // display: table;
+        // position: relative;
+        // top:40%;
+        // padding-left: 80px;
+        display: block;
+        text-align: center;
+        margin: 30px 0;
         font-size: 18px;
-        position: relative;
-        top:40%;
-        padding-left: 80px;
         text-decoration: none;
-        color:#aaa
+        color:#aaa;
+        // background-color: rebeccapurple;
     }
 }
 @media screen and (max-width: 960px) {
     .About {
         width: 100vw;
-        height: fit-content;
+        // height:400px;
         &__container {
-            // background-color:greenyellow;
+            // background-color:gold;
             display: static;
             transform: none;
             flex-direction: column;
-            margin-top: 30px;
-            // background-color: skyblue;
+            margin:30px auto 0;
             height: fit-content;
         }
         &__introduction {
-            // background-color: royalblue;
+            // position: static;
             margin-left: 10%;
-            position: static;
-            // margin:0 auto;
         }
         &__copy {
-            // background-color: salmon;
-            position: static;
-            writing-mode: horizontal-tb;
-            // left: 2%;
+            // position: static;
             height: fit-content;
             margin: 0 auto;
+            writing-mode: horizontal-tb;
         }
         &__title {
-            position: static;
+            // position: static;
             white-space: normal;
         }
-        &__article {
-            position: static;
-        }
+        // &__article {
+        //     // position: static;
+        // }
         &__link {
             position: static;
-            width: 40%;
-            // background-color: slateblue;
-            padding: 30px 0 0 0;
-            margin: 0 auto;
+            // padding: 30px 0 0 0;
+            margin: 30px 0;
+            // width: 40%;
         }
         &__childContainer {
-            // background-color: sandybrown;
-            width: 80%;
             position: static;
             margin: 0 auto;
+            width: 80%;
         }
     }
 }

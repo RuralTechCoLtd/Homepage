@@ -1,5 +1,8 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import "./NewsArchive.scss";
 
 type Props = {
@@ -28,9 +31,9 @@ const NewsArchive: React.FC = () => {
   return (
     <div className="NewsArchive">
       <div className="NewsArchive__container">
-        <Link to="/" className="NewsArchive__back">
+        <HashLink to="/#News" className="NewsArchive__back">
           News
-        </Link>
+        </HashLink>
         <h2 className="NewsArchive__title">News Archive</h2>
         <ArchiveArticle
           image="https://placehold.jp/750x500.png"

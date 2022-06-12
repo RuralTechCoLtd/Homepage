@@ -1,25 +1,23 @@
-// common, large screen (norm width is 1440px)
 .Footer {
     font-family: var(--my-font1), var(--my-font2);
     background-color: #AAA;
     color: #fff;
     width: 90%;
-    height: 35vh;
+    height: 350px;
     
     &__wrapper {
-        height: fit-content;
-        position: relative;
         display: table;
+        position: relative;
         top: 50%;
         transform: translateY(-50%);
         left: 10%;
+        height: fit-content;
     }
     
     &__logo {
-        line-height: 2;
         white-space: nowrap;
+        line-height: 2;
         font-size: 60px;
-        // padding-left: 5%;
     }
     
     &__snsicon--wrapper {
@@ -34,22 +32,15 @@
     
     &__copyright {
         margin-left: 10px;
-        padding-top:20%;
+        padding-top:15%;
         letter-spacing: 2px;
     }
 }
     
-    // small screen
 @media screen and (max-width: 960px) {
     .Footer {
         width: 100vw;
-        // &__wrapper {
-        //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: space-between;
-        //     align-items: center;
-        //     left: 0%;
-        // }
+        height: 300px;
         &__logo {
             font-size: 35px;
             padding-left: 0px;

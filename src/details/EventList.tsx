@@ -1,6 +1,9 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import "./EventList.scss";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 type Props = {
   to: string;
@@ -26,12 +29,12 @@ const EventListArticle: React.FC<Props> = (props: Props) => {
 const EventList: React.FC = () => {
   return (
     <div className="EventList">
-      <Link className="EventList__back" to="/">
+      <HashLink className="EventList__back" to="/#Services">
         Services
-      </Link>
+      </HashLink>
       <h2 className="EventList__title">イベント一覧</h2>
       <EventListArticle
-        to="/Services/EventList/EventDetails"
+        to="/EventList/EventDetails"
         image="https://placehold.jp/160x160.png"
         heading="社会人向けICTセミナー"
         date="2021年○月○日"
@@ -42,7 +45,7 @@ const EventList: React.FC = () => {
         image="https://placehold.jp/160x160.png"
         heading="ICT人材育成 キッズプログラミング教室"
         date="2021年○月○日"
-        article="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        article="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##"
       />
       <EventListArticle
@@ -50,7 +53,7 @@ const EventList: React.FC = () => {
         image="https://placehold.jp/160x160.png"
         heading="Pythonによる機械学習"
         date="2021年○月○日"
-        article="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        article="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##"
       />
       <EventListArticle
@@ -58,7 +61,7 @@ const EventList: React.FC = () => {
         image="https://placehold.jp/160x160.png"
         heading="シェルコマンド学習"
         date="2021年○月○日"
-        article="##EXANPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
+        article="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##"
       />
     </div>

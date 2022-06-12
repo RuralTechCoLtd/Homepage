@@ -1,8 +1,11 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import "./Footer.scss";
 import { library } from "@fortawesome/fontawesome-svg-core";
+
+import "./Footer.scss";
+
 library.add(fab);
 
 const Footer: React.FC = () => {
