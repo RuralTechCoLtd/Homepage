@@ -9,14 +9,50 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        position: relative;
+        &__1 {
+            position: absolute;
+            top:100%;
+            transform: translateY(-125%);
+        }
+        &__2 {
+            position: absolute;
+            top:100%;
+            transform: translateY(-115%);
+        }
+        &__3 {
+            position:  absolute;
+            top:100%;
+            transform: translateY(-95%);
+        }
         &__svg {
             position: absolute;
             transform: translateY(-99%);
             width: 90vw;
+            display: none;
         }
     }
     &__bottom {
         width: 90vw;
+        display: none;
+        &__waves {
+            height: 80px;
+            width: 90vw;
+            position: relative;
+            z-index: 1;
+        }
+        &__1 {
+            position: absolute;
+            transform: translateY(30%) rotate(180deg);
+        }
+        &__2 {
+            position: absolute;
+            transform: translateY(20%) rotate(180deg);
+        }
+        &__3 {
+            position: absolute;
+            transform: translateY(-3%) rotate(180deg);
+        }
     }
     &__wrapper {
         margin: 0 auto;
@@ -68,6 +104,7 @@
         text-align: right;
         font-size: 20px;
         color: #666;
+        z-index: 2;
     }
 }
 @media screen and (max-width: 960px) {
@@ -103,6 +140,9 @@
         }
         &__bottom {
             width: 100vw;
+            &__waves {
+                width: 100vw;
+            }
         }
     }
 }
