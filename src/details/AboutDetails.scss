@@ -10,6 +10,43 @@
 	  	// background-size: cover;
 	  	color: white;
     }
+	.current {
+		opacity: 1;
+	}
+		&__boyInSnow {
+			height: 100vh;
+			width: 90%;
+			background-image: url("../images/designMaterial/background/BoyInSnow.webp");
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			transition: opacity 2s;
+			opacity: 0;
+		}
+		&__man2 {
+			height: 100vh;
+			width: 90%;
+			background-image: url("../images/designMaterial/background/ManBesideTheRiver2.webp");
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			transition: opacity 2s;
+			opacity: 0;
+			
+		}
+		&__working {
+			height: 100vh;
+			width: 90%;
+			background-image: url("../images/designMaterial/background/WorkingInTheMeadow.webp");
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			transition: opacity 2s;
+			opacity: 0;
+		}
 		&__childContainer {
 			position: relative;
 			top: 80%;
@@ -56,6 +93,15 @@
 @media screen and (max-width: 960px) {
     .AboutDetails {
         width: 100vw;
+		&__boyInSnow {
+			width: 100%;
+		}
+		&__man2 {
+			width: 100%;
+		}
+		&__working {
+			width: 100%;
+		}
 		&__childContainer {
 			top: 70%
 		}

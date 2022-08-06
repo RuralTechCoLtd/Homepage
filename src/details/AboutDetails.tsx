@@ -2,37 +2,29 @@ import React, { useState, useEffect } from "react";
 
 import "./AboutDetails.scss";
 
-import BoyInSnow from "../images/designMaterial/background/BoyInSnow.webp";
-import Man2 from "../images/designMaterial/background/ManBesideTheRiver2.webp";
-import Working from "../images/designMaterial/background/WorkingInTheMeadow.webp";
-
-const images = [BoyInSnow, Man2, Working];
-
-const coordinate = ["center center", "center center", "center center"];
-
 const AboutDetails: React.FC = () => {
   const [value, setValue] = useState(0);
-
   useEffect(() => {
+    const imageList = document.querySelectorAll(".AboutDetails__heroImage div");
     const interval = setInterval(() => {
-      setValue((v) => (v === 2 ? 0 : v + 1));
-    }, 5000);
+      imageList[value].classList.remove("current");
+      setValue((prevValue) => {
+        return prevValue === 2 ? 0 : prevValue + 1;
+      });
+    }, 10000);
+    imageList[value].classList.add("current");
+
     return () => clearInterval(interval);
-  }, []);
+  }, [value]);
   return (
     <div className="AboutDetails" id="AboutUs">
-      <div
-        className="AboutDetails__heroImage"
-        style={{
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          background: "url(" + images[value] + ")",
-          backgroundPosition: coordinate[value],
-        }}
-      >
+      <div className="AboutDetails__heroImage">
+        <div className="AboutDetails__boyInSnow current"></div>
+        <div className="AboutDetails__man2"></div>
+        <div className="AboutDetails__working"></div>
         <div className="AboutDetails__childContainer">
           <h3 className="AboutDetails__sub">About Us</h3>
-          <h1 className="AboutDetails__title">Rural Tech</h1>
+          <h1 className="AboutDetails__title">Rural Tech{value}</h1>
         </div>
       </div>
       <div className="AboutDetails__article">
