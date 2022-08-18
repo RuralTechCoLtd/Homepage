@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Homepage/static/css/main.336960c5.chunk.css",
-    "main.js": "/Homepage/static/js/main.f8e9ebaa.chunk.js",
-    "main.js.map": "/Homepage/static/js/main.f8e9ebaa.chunk.js.map",
-    "runtime-main.js": "/Homepage/static/js/runtime-main.ea4b4b43.js",
-    "runtime-main.js.map": "/Homepage/static/js/runtime-main.ea4b4b43.js.map",
-    "static/js/2.ca3e6c09.chunk.js": "/Homepage/static/js/2.ca3e6c09.chunk.js",
-    "static/js/2.ca3e6c09.chunk.js.map": "/Homepage/static/js/2.ca3e6c09.chunk.js.map",
-    "static/js/3.a98bd566.chunk.js": "/Homepage/static/js/3.a98bd566.chunk.js",
-    "static/js/3.a98bd566.chunk.js.map": "/Homepage/static/js/3.a98bd566.chunk.js.map",
+    "main.css": "/Homepage/static/css/main.92061736.chunk.css",
+    "main.js": "/Homepage/static/js/main.1062789a.chunk.js",
+    "main.js.map": "/Homepage/static/js/main.1062789a.chunk.js.map",
+    "runtime-main.js": "/Homepage/static/js/runtime-main.d26a0126.js",
+    "runtime-main.js.map": "/Homepage/static/js/runtime-main.d26a0126.js.map",
+    "static/js/2.eec0a75b.chunk.js": "/Homepage/static/js/2.eec0a75b.chunk.js",
+    "static/js/2.eec0a75b.chunk.js.map": "/Homepage/static/js/2.eec0a75b.chunk.js.map",
+    "static/js/3.d81e7b7d.chunk.js": "/Homepage/static/js/3.d81e7b7d.chunk.js",
+    "static/js/3.d81e7b7d.chunk.js.map": "/Homepage/static/js/3.d81e7b7d.chunk.js.map",
     "index.html": "/Homepage/index.html",
-    "static/css/main.336960c5.chunk.css.map": "/Homepage/static/css/main.336960c5.chunk.css.map",
-    "static/js/2.ca3e6c09.chunk.js.LICENSE.txt": "/Homepage/static/js/2.ca3e6c09.chunk.js.LICENSE.txt",
+    "static/css/main.92061736.chunk.css.map": "/Homepage/static/css/main.92061736.chunk.css.map",
+    "static/js/2.eec0a75b.chunk.js.LICENSE.txt": "/Homepage/static/js/2.eec0a75b.chunk.js.LICENSE.txt",
     "static/media/AboutDetails.scss": "/Homepage/static/media/BoyInSnow.54b1dc4e.webp",
     "static/media/MacBookOverDesk.f600a268.webp": "/Homepage/static/media/MacBookOverDesk.f600a268.webp",
     "static/media/MaritimeTerrace.7aad9feb.webp": "/Homepage/static/media/MaritimeTerrace.7aad9feb.webp",
@@ -22,9 +22,9 @@
     "static/media/HeroImage.scss": "/Homepage/static/media/WomanTakingPicture.a729e164.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea4b4b43.js",
-    "static/js/2.ca3e6c09.chunk.js",
-    "static/css/main.336960c5.chunk.css",
-    "static/js/main.f8e9ebaa.chunk.js"
+    "static/js/runtime-main.d26a0126.js",
+    "static/js/2.eec0a75b.chunk.js",
+    "static/css/main.92061736.chunk.css",
+    "static/js/main.1062789a.chunk.js"
   ]
 }
