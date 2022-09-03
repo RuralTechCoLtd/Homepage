@@ -134,12 +134,12 @@
         }
         &__chip {
             display: block;
-            overflow-x: scroll;
+            // overflow-x: scroll;
             border-top: solid 2px #aaa;
             border-bottom: solid  2px #aaa;
-            background-color: #c1ffb1;
+            // background-color: #c1ffb1;
             font-size: 16px;
-            white-space: nowrap;
+            // white-space: nowrap;
             > span {
                 display: inline-block;
                 margin: 5px;
