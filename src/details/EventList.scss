@@ -47,6 +47,8 @@
         margin: 30px auto;
         text-decoration: none;
         color: #444;
+        transition-property: opacity transform;
+        transition-duration: 2s;    
         }
     &__image {
         padding-right: 20px;

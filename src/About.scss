@@ -1,24 +1,17 @@
 .About {
     width: 90%;
-    // height: 100vh;
-    // background-color: aqua;
+    transition-property: opacity transform;
+    transition-duration: 2s;
     font-family: var(--my-font1), var(--my-font2), 
     var(--my-font3), var(--my-font4);
     &__container {
         display: flex;
         flex-direction: row;
-        // position: relative;
-        // top: 50%;
-        // transform: translateY(-50%);
         justify-content: center;
         margin: 100px 0 60px;
-        // height: 70%;
         width: 95%;
     }
     &__introduction {
-        // position: relative;
-        // top: 40%;
-        // transform: translateY(-5%);
         white-space: nowrap;
         height: 40px;
         width: fit-content;
@@ -34,11 +27,6 @@
         }
     }
     &__copy {
-        // position: relative;
-        // top:40%;
-        // transform: translateY(-5%);
-        // height: 280px;
-        // width: fit-content;
         margin: 0 5%;
         font-size: 20px;
         font-weight: bold;
@@ -47,38 +35,24 @@
         letter-spacing: 10px;
     }
     &__title {
-        // display: table;
-        // position: relative;
-        // top: 20%;
         font-size: 60px;
-        // background-color: darkorange;
     }
     &__article {
-        // display: table;
-        // position: relative;
-        // top:30%;
         font-size: 18px;
     }
     &__link {
-        // display: table;
-        // position: relative;
-        // top:40%;
-        // padding-left: 80px;
         display: block;
         text-align: center;
         margin: 30px 0;
         font-size: 18px;
         text-decoration: none;
         color:#aaa;
-        // background-color: rebeccapurple;
     }
 }
 @media screen and (max-width: 960px) {
     .About {
         width: 100vw;
-        // height:400px;
         &__container {
-            // background-color:gold;
             display: static;
             transform: none;
             flex-direction: column;
@@ -86,27 +60,19 @@
             height: fit-content;
         }
         &__introduction {
-            // position: static;
             margin-left: 10%;
         }
         &__copy {
-            // position: static;
             height: fit-content;
             margin: 0 auto;
             writing-mode: horizontal-tb;
         }
         &__title {
-            // position: static;
             white-space: normal;
         }
-        // &__article {
-        //     // position: static;
-        // }
         &__link {
             position: static;
-            // padding: 30px 0 0 0;
             margin: 30px 0;
-            // width: 40%;
         }
         &__childContainer {
             position: static;

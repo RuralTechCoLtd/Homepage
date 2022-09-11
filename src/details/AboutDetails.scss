@@ -2,6 +2,8 @@
     width: 90%;
     font-family: var(--my-font1), var(--my-font2), 
     var(--my-font3), var(--my-font4);
+	transition-property: opacity transform;
+    transition-duration: 2s;
     &__heroImage {
 		height: 100vh;
 		width: 100%;
@@ -28,6 +30,8 @@
 		&__article {
 			width: 85%;
 			margin: 0 auto;
+			transition-property: inherit;
+			transition-duration: inherit;		
 		}
 		&__parag {
 			padding:60px 0 80px;

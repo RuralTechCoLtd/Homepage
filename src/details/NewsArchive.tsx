@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+import { useInView } from "react-intersection-observer";
+
 import "./NewsArchive.scss";
 
 type Props = {
@@ -13,8 +15,20 @@ type Props = {
 };
 
 const ArchiveArticle: React.FC<Props> = (props: Props) => {
+  const { ref, inView } = useInView({
+    rootMargin: "-100px",
+    triggerOnce: true,
+  });
   return (
-    <div className="NewsArchive__item">
+    <div
+      className="NewsArchive__item"
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+    >
       <img src={props.image} className="NewsArchive__item__img"></img>
       <div className="NewsArchive__item__childContainer">
         <h2 className="NewsArchive__item__title">{props.title}</h2>

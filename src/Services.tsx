@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+import { useInView } from "react-intersection-observer";
+
 import { DoubleArrow } from "@mui/icons-material";
 
 import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
@@ -204,8 +206,23 @@ const Services: React.FC = () => {
   const setKids = () => {
     setContent("kids");
   };
+
+  const { ref, inView } = useInView({
+    rootMargin: "-100px", // ref要素が現れてから100px過ぎたら
+    triggerOnce: true, // 最初の一度だけ実行
+  });
+
   return (
-    <div className="Services" id="Services">
+    <div
+      ref={ref}
+      style={
+        inView
+          ? { opacity: 100, transform: "translateY(0)" }
+          : { opacity: 0, transform: "translateY(30px)" }
+      }
+      className="Services"
+      id="Services"
+    >
       <h2 className="Services__title">Services</h2>
       <div className="Services__container">
         <div className="Services__childContainer">

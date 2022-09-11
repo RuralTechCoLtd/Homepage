@@ -5,7 +5,7 @@
     width: 10%;
     height: 100vh;
     font-family: var(--my-font1),var(--my-font2);
-    background-color: #AAAA;
+    background-color: #AAA;
     color: #FFF;
     &__site-name {
         position: absolute;
@@ -36,6 +36,7 @@
         z-index: 100;
         height: 10vh;
         width: 100vw;
+        background-color: #AAAA;
         &__site-name {
             transform: translateY(-50%);
             top: 50%;
