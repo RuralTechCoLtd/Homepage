@@ -132,38 +132,6 @@
             overflow-x: scroll;
 
         }
-        &__chip {
-            display: block;
-            // overflow-x: scroll;
-            border-top: solid 2px #aaa;
-            border-bottom: solid  2px #aaa;
-            // background-color: #c1ffb1;
-            font-size: 16px;
-            // white-space: nowrap;
-            > span {
-                display: inline-block;
-                margin: 5px;
-                padding: 2px;
-            }
-            &__red {
-                color: #333;
-                border:solid 1px #af7878;
-                border-radius: 20px;
-                background-color: #ffb1b1;
-            }
-            &__blue {
-                color: #333;
-                border:solid 1px #5f6586;
-                border-radius: 20px;
-                background-color: #b1bdff;
-            }
-            &__purple {
-                color: #333;
-                border:solid 1px #88658f;
-                border-radius: 20px;
-                background-color: #f2b1ff;
-            }
-        }
         &__childContainer {
             display: flex;
             flex-direction: row;

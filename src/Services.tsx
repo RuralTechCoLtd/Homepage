@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
+import { Box, Chip } from "@mui/material";
+
 import { DoubleArrow } from "@mui/icons-material";
 
 import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
@@ -204,42 +206,51 @@ const Services: React.FC = () => {
   const setKids = () => {
     setContent("kids");
   };
+
+  const labelsAndFunctions: [string, () => void][] = [
+    ["受託開発", setEngineer],
+    ["パッケージアプリケーション開発", setPackage],
+    ["Assist", setAssist],
+    ["ホームページ制作", setHomepage],
+    ["Git", setGit],
+    ["ホスティング", setHosting],
+    ["JavaScript", setJavaScript],
+    ["イベント予定(一覧)", Function],
+    ["社会人向けICTセミナー", setWorker],
+    ["キッズプログラミング教室", setKids],
+  ];
   return (
     <div className="Services" id="Services">
       <h2 className="Services__title">Services</h2>
-      <div className="Services__chip">
-        <span className="Services__chip__red" onClick={setEngineer}>
-          受託開発
-        </span>
-        <span className="Services__chip__red" onClick={setPackage}>
-          パッケージアプリケーション開発
-        </span>
-        <span className="Services__chip__red" onClick={setAssist}>
-          Assist
-        </span>
-        <span className="Services__chip__blue" onClick={setHomepage}>
-          ホームページ制作
-        </span>
-        <span className="Services__chip__blue" onClick={setGit}>
-          Git
-        </span>
-        <span className="Services__chip__blue" onClick={setHosting}>
-          ホスティング
-        </span>
-        <span className="Services__chip__blue" onClick={setJavaScript}>
-          JavaScript
-        </span>
-        <Link className="Services__chip__purple" to="/EventList">
-          イベント予定(一覧)
-        </Link>{" "}
-        <span className="Services__chip__purple" onClick={setWorker}>
-          社会人向けICTセミナー
-        </span>
-        <span className="Services__chip__purple" onClick={setKids}>
-          キッズプログラミング教室
-        </span>
-      </div>
-
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          margin: "10px 10px",
+          justifyContent: "center",
+          "@media screen and (min-width:961px)": {
+            display: "none",
+          },
+        }}
+      >
+        {labelsAndFunctions.map((elem) => {
+          if (elem === labelsAndFunctions[7]) {
+            return (
+              <Link to="/EventList" style={{ textDecoration: "none" }}>
+                <Chip label={elem[0]} color="primary" variant="outlined"></Chip>
+              </Link>
+            );
+          }
+          return (
+            <Chip
+              label={elem[0]}
+              color="primary"
+              variant="outlined"
+              onClick={elem[1]}
+            ></Chip>
+          );
+        })}
+      </Box>
       <div className="Services__container">
         <div className="Services__childContainer">
           <ul className="Services__navlist">
