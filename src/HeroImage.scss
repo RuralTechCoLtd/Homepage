@@ -3,10 +3,45 @@
   height: 100vh;
   width: 90%;
   font-family: var(--my-font1), var(--my-font2);
-  background: url("./images/designMaterial/background/WomanTakingPicture.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  .current {
+    opacity: 1;
+  }
+  &__womanTakingPictures {
+    height: 100%;
+		width: 90%;
+		background-image: url("./images/designMaterial/background/WomanTakingPicture.webp");
+		position: absolute;
+		background-repeat: no-repeat;
+	  	background-position: center center;
+	  	background-size: cover;
+		transition: opacity 2s;
+		opacity: 0;
+  }
+  &__man1 {
+    height: 100%;
+		width: 90%;
+		background-image: url("./images/designMaterial/background/ManBesideTheRiver1.webp");
+		position: absolute;
+		background-repeat: no-repeat;
+	  	background-position: center center;
+	  	background-size: cover;
+		transition: opacity 2s;
+		opacity: 0;
+  }
+  &__looking {
+    height: 100%;
+		width: 90%;
+		background-image: url("./images/designMaterial/background/LookingAtWaterfront.webp");
+		position: absolute;
+		background-repeat: no-repeat;
+	  	background-position: center center;
+	  	background-size: cover;
+		transition: opacity 2s;
+		opacity: 0;
+  }
   &__message {
     position: relative;
     top: 30%;
@@ -31,7 +66,16 @@
 }
 @media screen and (max-width: 960px) {
   .HeroContainer {
-    width: 100vw;
+    width: 100%;
+    &__womanTakingPictures {
+      width: 100%;
+    }
+    &__man1 {
+      width: 100%;
+    }
+    &__looking {
+      width: 100%;
+    }
     &__corporateName {
       font-size: 100px;
     }
@@ -42,7 +86,9 @@
 }
 @media screen and (max-width: 620px) {
   .HeroContainer {
-    background-position: 30% center;
+    &__womanTakingPictures {
+      background-position: 30% center;
+    }
     &__corporateName {
       font-size: 60px;
     }

@@ -23,7 +23,7 @@ import "./App.scss";
 const App: React.FC = () => {
   useEffect(() => {
     document.title = `Rural Tech`;
-  });
+  }, []);
   return (
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>

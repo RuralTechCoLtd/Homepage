@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { useInView } from "react-intersection-observer";
 
@@ -10,12 +10,28 @@ const AboutDetails: React.FC = () => {
     triggerOnce: true,
   });
 
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    const imageList = document.querySelectorAll(".AboutDetails__heroImage div");
+    const interval = setInterval(() => {
+      imageList[value].classList.remove("current");
+      setValue((prevValue) => {
+        return prevValue === 2 ? 0 : prevValue + 1;
+      });
+    }, 10000);
+    imageList[value].classList.add("current");
+
+    return () => clearInterval(interval);
+  }, [value]);
   return (
     <div className="AboutDetails" id="AboutUs">
       <div className="AboutDetails__heroImage">
+        <div className="AboutDetails__boyInSnow current"></div>
+        <div className="AboutDetails__man2"></div>
+        <div className="AboutDetails__working"></div>
         <div className="AboutDetails__childContainer">
           <h3 className="AboutDetails__sub">About Us</h3>
-          <h1 className="AboutDetails__title">Rural Tech</h1>
+          <h1 className="AboutDetails__title">Rural Tech{value}</h1>
         </div>
       </div>
       <div
