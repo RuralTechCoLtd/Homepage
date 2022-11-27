@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
 
+import { Box, Chip } from "@mui/material";
+
 import { DoubleArrow } from "@mui/icons-material";
 
 import AssistImage from "./images/designMaterial/article/SourceCodeOnScreen.webp";
@@ -212,6 +214,18 @@ const Services: React.FC = () => {
     triggerOnce: true, // 最初の一度だけ実行
   });
 
+  const labelsAndFunctions: [string, () => void][] = [
+    ["受託開発", setEngineer],
+    ["パッケージアプリケーション開発", setPackage],
+    ["Assist", setAssist],
+    ["ホームページ制作", setHomepage],
+    ["Git", setGit],
+    ["ホスティング", setHosting],
+    ["JavaScript", setJavaScript],
+    ["イベント予定(一覧)", Function],
+    ["社会人向けICTセミナー", setWorker],
+    ["キッズプログラミング教室", setKids],
+  ];
   return (
     <div
       ref={ref}
@@ -224,19 +238,50 @@ const Services: React.FC = () => {
       id="Services"
     >
       <h2 className="Services__title">Services</h2>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          margin: "10px 10px",
+          justifyContent: "center",
+          "@media screen and (min-width:961px)": {
+            display: "none",
+          },
+        }}
+      >
+        {labelsAndFunctions.map((elem) => {
+          if (elem === labelsAndFunctions[7]) {
+            return (
+              <Link to="/EventList" style={{ textDecoration: "none" }}>
+                <Chip label={elem[0]} color="primary" variant="outlined"></Chip>
+              </Link>
+            );
+          }
+          return (
+            <Chip
+              label={elem[0]}
+              color="primary"
+              variant="outlined"
+              onClick={elem[1]}
+            ></Chip>
+          );
+        })}
+      </Box>
       <div className="Services__container">
         <div className="Services__childContainer">
           <ul className="Services__navlist">
-            <li>クラウドアプリケーション開発</li>
-            <ul>
+            <li className="Services__navlist__cloudApp">
+              クラウドアプリケーション開発
+            </li>
+            <ul className="Services__navlist__item">
               <li onClick={setEngineer}>受託開発</li>
               <li onClick={setPackage}>パッケージアプリケーション開発</li>
               <li onClick={setAssist}>Assist</li>
             </ul>
           </ul>
           <ul className="Services__navlist">
-            <li>ICTセミナー</li>
-            <ul>
+            <li className="Services__navlist__ICT">ICTセミナー</li>
+            <ul className="Services__navlist__item">
               <li onClick={setHomepage}>ホームページ制作</li>
               <li onClick={setGit}>Git</li>
               <li onClick={setHosting}>ホスティング</li>
@@ -244,12 +289,12 @@ const Services: React.FC = () => {
             </ul>
           </ul>
           <ul className="Services__navlist">
-            <li>
+            <li className="Services__navlist__item">
               <Link className="Services__navlist__link" to="/EventList">
                 イベント予定(一覧)
               </Link>
             </li>
-            <ul>
+            <ul className="Services__navlist__item">
               <li onClick={setWorker}>社会人向けICTセミナー</li>
               <li onClick={setKids}>
                 ICT人材育成 <br />
