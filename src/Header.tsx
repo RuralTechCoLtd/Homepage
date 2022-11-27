@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import {
@@ -76,7 +75,6 @@ const Header: React.FC = () => {
         sx={{
           width: "80vw",
           maxWidth: "300px",
-          backgroundColor: "#aaa",
           color: "white",
           "& .MuiListItemText-root": {
             color: "white",
@@ -119,7 +117,12 @@ const Header: React.FC = () => {
             </DesignedListItemIcon>
             <ListItemText primary={navlist[1]} />
           </ListItem>
-          <ListItem component={HashLink} to="/#Services">
+          <ListItem
+            button
+            key={navlist[2]}
+            component={HashLink}
+            to="/#Services"
+          >
             <DesignedListItemIcon>
               <Apps />
             </DesignedListItemIcon>
