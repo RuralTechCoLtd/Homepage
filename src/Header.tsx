@@ -31,6 +31,15 @@ const DesignedListItemIcon = styled(ListItemIcon)(() => ({
   textDecoration: "none",
   fontSize: "large",
 }));
+type LinkDataList = { title: string; linkTo: string; icon: JSX.Element };
+const linkDataList: LinkDataList[] = [
+  { title: "TOP", linkTo: "/#", icon: <AssistantPhoto /> },
+  { title: "ABOUT", linkTo: "/AboutDetails", icon: <Work /> },
+  { title: "SERVICES", linkTo: "/#Services", icon: <Apps /> },
+  { title: "CEOGREETING", linkTo: "/Greeting", icon: <Face /> },
+  { title: "NEWS ARCHIVE", linkTo: "/News/Archive", icon: <Announcement /> },
+  { title: "LINKS", linkTo: "/#Footer", icon: <Link /> },
+];
 
 const Header: React.FC = () => {
   const [state, setState] = useState({
@@ -39,14 +48,7 @@ const Header: React.FC = () => {
     bottom: false,
     right: false,
   });
-  const navlist: string[] = [
-    "TOP",
-    "ABOUT",
-    "SERVICES",
-    "CEOGREETING",
-    "NEWS ARCHIVE",
-    "LINKS",
-  ];
+
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -86,71 +88,17 @@ const Header: React.FC = () => {
         }}
       >
         <List>
-          <ListItem button key={navlist[0]} component={HashLink} to="/#">
-            <DesignedListItemIcon>
-              <AssistantPhoto />
-            </DesignedListItemIcon>
-            <ListItemText
-              primary={navlist[0]}
-              sx={{
-                width: "80vw",
-                maxWidth: "300px",
-                color: "white",
-                "& .MuiListItemText-root": {
-                  color: "white",
-                  textDecoration: "none",
-                },
-                "& .MuiListItemText-root span": {
-                  textDecoration: "none",
-                },
-              }}
-            />
-          </ListItem>
-          <ListItem
-            button
-            key={navlist[1]}
-            component={HashLink}
-            to="/AboutDetails"
-          >
-            <DesignedListItemIcon>
-              <Work />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[1]} />
-          </ListItem>
-          <ListItem
-            button
-            key={navlist[2]}
-            component={HashLink}
-            to="/#Services"
-          >
-            <DesignedListItemIcon>
-              <Apps />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[2]} />
-          </ListItem>
-          <ListItem button key={navlist[3]} component={HashLink} to="/Greeting">
-            <DesignedListItemIcon>
-              <Face />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[3]} />
-          </ListItem>
-          <ListItem
-            button
-            key={navlist[4]}
-            component={HashLink}
-            to="/News/Archive"
-          >
-            <DesignedListItemIcon>
-              <Announcement />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[4]} />
-          </ListItem>
-          <ListItem button key={navlist[5]} component={HashLink} to="/#Footer">
-            <DesignedListItemIcon>
-              <Link />
-            </DesignedListItemIcon>
-            <ListItemText primary={navlist[5]} />
-          </ListItem>
+          {linkDataList.map((item) => (
+            <ListItem
+              button
+              key={item.title}
+              component={HashLink}
+              to={item.linkTo}
+            >
+              <DesignedListItemIcon>{item.icon}</DesignedListItemIcon>
+              <ListItemText primary={item.title} />
+            </ListItem>
+          ))}
         </List>
       </Box>
     </Box>
