@@ -249,16 +249,21 @@ const Services: React.FC = () => {
           },
         }}
       >
-        {labelsAndFunctions.map((elem) => {
+        {labelsAndFunctions.map((elem, index) => {
           if (elem === labelsAndFunctions[7]) {
             return (
-              <Link to="/EventList" style={{ textDecoration: "none" }}>
+              <Link
+                key={index}
+                to="/EventList"
+                style={{ textDecoration: "none" }}
+              >
                 <Chip label={elem[0]} color="primary" variant="outlined"></Chip>
               </Link>
             );
           }
           return (
             <Chip
+              key={index}
               label={elem[0]}
               color="primary"
               variant="outlined"
