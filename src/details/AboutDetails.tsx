@@ -55,8 +55,8 @@ const AboutDetails: React.FC = () => {
             オンラインサロンやIT勉強会で地域貢献を
           </h2>
           <div className="AboutDetails__arts__pics">
-            <img src="http://placehold.jp/600x400.png"></img>
-            <img src="http://placehold.jp/600x400.png"></img>
+            <img src="https://placehold.jp/600x400.png"></img>
+            <img src="https://placehold.jp/600x400.png"></img>
           </div>
           <p className="AboutDetails__parag">
             新しい時代を生きていく子供達のためにプログラミング教育を実施します。子供達の
@@ -72,8 +72,8 @@ const AboutDetails: React.FC = () => {
             クラウドアプリケーション開発
           </h2>
           <div className="AboutDetails__arts__pics">
-            <img src="http://placehold.jp/600x400.png"></img>
-            <img src="http://placehold.jp/600x400.png"></img>
+            <img src="https://placehold.jp/600x400.png"></img>
+            <img src="https://placehold.jp/600x400.png"></img>
           </div>
           <p className="AboutDetails__parag">
             独自のアイディアによる地域特化のアプリケーションや、お客さまのニーズに寄り添う
