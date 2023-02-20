@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import ScrollToTop from "./ScrollToTop";
-import Services from "./Services";
 import Footer from "./Footer";
 
 import Top from "./Top";
@@ -19,6 +18,11 @@ import EntrustedDevelopment from "./details/EntrustedDevelopment";
 import PackagedApplication from "./details/PackagedApplication";
 
 import "./App.scss";
+import KidsProgramingSchool from "./details/Kids";
+import Hosting from "./details/Hosting";
+import JavaScript from "./details/JavaScript";
+import Homepage from "./details/Homepage";
+import Git from "./details/Git";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -32,7 +36,6 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" exact component={Top} />
           <Route path="/AboutDetails" component={AboutDetails} />
-          {/* <Route path="/Services" component={Services} /> */}
           <Route path="/EventList" exact component={EventList} />
           <Route path="/EventList/EventDetails" component={EventDetails} />
           <Route path="/News/Archive" component={NewsArchive} />
@@ -44,6 +47,11 @@ const App: React.FC = () => {
             component={EntrustedDevelopment}
           />
           <Route path="/PackagedApplication" component={PackagedApplication} />
+          <Route path="/Git" component={Git}></Route>
+          <Route path="/Kids" component={KidsProgramingSchool}></Route>
+          <Route path="/Hosting" component={Hosting}></Route>
+          <Route path="/JavaScript" component={JavaScript}></Route>
+          <Route path="/Homepage" component={Homepage}></Route>
         </Switch>
         <Footer />
       </Router>
