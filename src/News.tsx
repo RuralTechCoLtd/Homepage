@@ -1,5 +1,13 @@
 import React from "react";
 
+import { useState, useEffect } from "react";
+
+import ReactMarkdown from "react-markdown";
+
+import remarkGfm from "remark-gfm";
+
+import sample from "./sample.md";
+
 import { Link } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
@@ -10,12 +18,37 @@ import SampleImage3ForNews from "./images/designMaterial/article/MaritimeTerrace
 
 import "./News.scss";
 
+let isLoadwidgets = false;
+const Twemb: React.FC = () => {
+  React.useEffect(() => {
+    if (!isLoadwidgets) {
+      const s = document.createElement("script");
+      s.setAttribute("src", "https://platform.twitter.com/widgets.js");
+      document.body.appendChild(s);
+      isLoadwidgets = true;
+    }
+  }, []);
+  return (
+    <a
+      className="twitter-timeline"
+      data-width="300"
+      data-height="250"
+      data-theme="dark"
+      data-chrome="noheadernofooternoborders"
+      href="https://twitter.com/masason"
+    >
+      latest twitter news.
+    </a>
+  );
+};
+
 type Props = {
   image: string;
   date: string;
   title: string;
   article: string;
   to: string;
+  // iframe: boolean;
 };
 const NewsArticle: React.FC<Props> = (props: Props) => {
   const { ref, inView } = useInView({
@@ -47,7 +80,12 @@ const News: React.FC = () => {
     rootMargin: "-100px",
     triggerOnce: true,
   });
-
+  const [sampleText, setSampleText] = useState("");
+  useEffect(() => {
+    fetch(sample)
+      .then((res) => res.text())
+      .then((text) => setSampleText(text));
+  });
   return (
     <div className="News" id="News">
       <h2
@@ -61,6 +99,12 @@ const News: React.FC = () => {
       >
         News
       </h2>
+      <div>{sampleText}</div>
+      <ReactMarkdown># hello *world.*</ReactMarkdown>
+      <ReactMarkdown
+        children={sampleText}
+        remarkPlugins={[remarkGfm]}
+      ></ReactMarkdown>
       <Link
         to="/News/Archive"
         className="News__toArchive"
@@ -74,6 +118,7 @@ const News: React.FC = () => {
         Archive &gt;&gt;
       </Link>
       <div className="News__container">
+        <Twemb />
         <NewsArticle
           to="/News/Details"
           image={SampleImage1ForNews}
