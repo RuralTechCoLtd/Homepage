@@ -95,7 +95,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Seminar for make homepages-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/Homepage"
       ></Templates>
     );
   } else if (props.title === "git") {
@@ -107,7 +107,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Seminar for Git-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/Git"
       ></Templates>
     );
   } else if (props.title === "hosting") {
@@ -119,7 +119,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Seminar for Hosting service-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/Hosting"
       ></Templates>
     );
   } else if (props.title === "javascript") {
@@ -131,7 +131,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="-Seminar for JavaScript-"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/JavaScript"
       ></Templates>
     );
   } else if (props.title === "worker") {
@@ -155,7 +155,7 @@ const Products: React.FC<Props> = (props: Props) => {
         sub="2021年○月○日午前10時 会場：〇〇市役所２階会議室"
         para="##EXAMPLE The system enables visualization and flexible management of processes, automates tasks that are difficult to manage with conventional spreadsheets, and reduces management time.
         It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks. It also automates tasks that are difficult to manage with conventional spreadsheets, thereby reducing the time required for management tasks and enabling more effective use of human resources.##."
-        to="#"
+        to="/Kids"
       ></Templates>
     );
   } else {
@@ -176,6 +176,24 @@ const Products: React.FC<Props> = (props: Props) => {
 
 const Services: React.FC = () => {
   const [content, setContent] = useState<string>("");
+  const contentsString: string[] = [
+    "engineer",
+    "package",
+    "assist",
+    "homepage",
+    "git",
+    "hosting",
+    "javascript",
+    "worker",
+    "kids",
+  ];
+  const setContents: (() => void)[] = contentsString.map((content) => {
+    return () => {
+      setContent(content);
+    };
+  });
+
+  console.log(setContents);
 
   const setEngineer = () => {
     setContent("engineer");
@@ -249,16 +267,21 @@ const Services: React.FC = () => {
           },
         }}
       >
-        {labelsAndFunctions.map((elem) => {
+        {labelsAndFunctions.map((elem, index) => {
           if (elem === labelsAndFunctions[7]) {
             return (
-              <Link to="/EventList" style={{ textDecoration: "none" }}>
+              <Link
+                key={index}
+                to="/EventList"
+                style={{ textDecoration: "none" }}
+              >
                 <Chip label={elem[0]} color="primary" variant="outlined"></Chip>
               </Link>
             );
           }
           return (
             <Chip
+              key={index}
               label={elem[0]}
               color="primary"
               variant="outlined"
@@ -274,7 +297,7 @@ const Services: React.FC = () => {
               クラウドアプリケーション開発
             </li>
             <ul className="Services__navlist__item">
-              <li onClick={setEngineer}>受託開発</li>
+              <li onClick={setContents[0]}>受託開発</li>
               <li onClick={setPackage}>パッケージアプリケーション開発</li>
               <li onClick={setAssist}>Assist</li>
             </ul>
@@ -296,8 +319,9 @@ const Services: React.FC = () => {
             </li>
             <ul className="Services__navlist__item">
               <li onClick={setWorker}>社会人向けICTセミナー</li>
-              <li onClick={setKids}>
-                ICT人材育成 <br />
+              <li onClick={setKids} style={{ whiteSpace: "pre-wrap" }}>
+                ICT人材育成
+                <br />
                 キッズプログラミング教室
               </li>
             </ul>

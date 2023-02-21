@@ -5,12 +5,15 @@ import { useInView } from "react-intersection-observer";
 import { HashLink } from "react-router-hash-link";
 
 import "./Product.scss";
-
-const PackagedApplication: React.FC = () => {
+type Type = {
+  to: string;
+};
+const Product: React.FC<Type> = (type: Type) => {
   const { ref, inView } = useInView({
     rootMargin: "-100px",
     triggerOnce: true,
   });
+
   return (
     <div
       className="CommonDetails"
@@ -22,7 +25,7 @@ const PackagedApplication: React.FC = () => {
       }
     >
       <div className="CommonDetails__container">
-        <HashLink to="/#Services" className="CommonDetails__back">
+        <HashLink to={type.to} className="CommonDetails__back">
           Services
         </HashLink>
         <h2 className="CommonDetails__title">パッケージアプリケーション開発</h2>
@@ -60,5 +63,4 @@ const PackagedApplication: React.FC = () => {
     </div>
   );
 };
-
-export default PackagedApplication;
+export default Product;

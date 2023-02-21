@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 
 import "./Product.scss";
 
-const PackagedApplication: React.FC = () => {
+const JavaScript: React.FC = () => {
   const { ref, inView } = useInView({
     rootMargin: "-100px",
     triggerOnce: true,
@@ -25,10 +25,10 @@ const PackagedApplication: React.FC = () => {
         <HashLink to="/#Services" className="CommonDetails__back">
           Services
         </HashLink>
-        <h2 className="CommonDetails__title">パッケージアプリケーション開発</h2>
-        <p className="CommonDetails__sub">- Packaged Application -</p>
+        <h2 className="CommonDetails__title">JavaScript</h2>
+        <p className="CommonDetails__sub">- JavaScript -</p>
         <p className="CommonDetails__para">
-          パッケージアプリケーション開発、Rural
+          受託開発、Rural
           TechはITで地方から日本を元気づけます！先進のテクノロジーを地方から。
           独自のアイディアによる地域特化のアプリケーションや、お客さまのニーズに寄り添う
           業務アプリケーションも作成します。
@@ -61,4 +61,4 @@ const PackagedApplication: React.FC = () => {
   );
 };
 
-export default PackagedApplication;
+export default JavaScript;

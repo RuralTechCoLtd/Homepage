@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import { useInView } from "react-intersection-observer";
@@ -37,7 +36,7 @@ const Greeting: React.FC = () => {
             </ul>
           </div>
           <img
-            src="http://placehold.jp/720x480.png"
+            src="https://placehold.jp/720x480.png"
             className="Greeting__img"
           ></img>
         </div>
