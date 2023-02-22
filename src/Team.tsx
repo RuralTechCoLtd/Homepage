@@ -52,7 +52,7 @@ const Team: React.FC = () => {
       </div>
       <svg
         className="Team__top__svg"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         viewBox="0 0 1747 254.5"
       >
         <g
@@ -170,7 +170,7 @@ const Team: React.FC = () => {
       </div>
       <svg
         className="Team__bottom"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         viewBox="0 0 1747 254.5"
       >
         <g
